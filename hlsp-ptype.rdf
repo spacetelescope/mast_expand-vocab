@@ -1,0 +1,709 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://archive.stsci.edu/rdf/hlsp-dtype#"
+     xml:base="https://archive.stsci.edu/rdf/hlsp-dtype"
+     xmlns:dc="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:ivoasem="http://www.ivoa.net/rdf/ivoasem#">
+    <owl:Ontology rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype">
+        <owl:imports rdf:resource="http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf"/>
+        <dc:created>2023-04-25</dc:created>
+        <dc:creator>
+            <rdf:Description>
+                <foaf:name>MAST Staff</foaf:name>
+            </rdf:Description>
+        </dc:creator>
+        <dc:license rdf:resource="https://creativecommons.org/licenses/by-sa/3.0/legalcode"/>
+        <dc:title xml:lang="en">MAST HLSP Data Product Type Vocabulary</dc:title>
+        <ivoasem:vocflavour>SKOS</ivoasem:vocflavour>
+        <rdfs:label xml:lang="en">MAST HLSP Data Product Type Vocabulary</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.ivoa.net/rdf/ivoasem#vocflavour -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ivoa.net/rdf/ivoasem#vocflavour"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Abundance_Catalog -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Abundance_Catalog">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Source_Catalog"/>
+        <skos:altLabel>Abundance Measurements</skos:altLabel>
+        <skos:hiddenLabel>Abundances</skos:hiddenLabel>
+        <skos:prefLabel>Abundance Catalog</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Association_Table -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Association_Table">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Information"/>
+        <skos:prefLabel>Association Table</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Astrometric_Catalog -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Astrometric_Catalog">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Source_Catalog"/>
+        <skos:altLabel>Parallax Catalog</skos:altLabel>
+        <skos:hiddenLabel>Astrometry</skos:hiddenLabel>
+        <skos:hiddenLabel>Parallaxes</skos:hiddenLabel>
+        <skos:prefLabel>Astrometric Catalog</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Auxiliary_Data -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Auxiliary_Data">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Auxiliary Data</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Background_Map -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Background_Map">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Auxiliary_Data"/>
+        <skos:prefLabel>Background Map</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Bias_Frame -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Bias_Frame">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Calibration_Data"/>
+        <skos:prefLabel>Bias Frame</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Calibration_Data -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Calibration_Data">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Engineering Data</skos:altLabel>
+        <skos:prefLabel>Calibration Data</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Co-Trending_Basis_Vectors -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Co-Trending_Basis_Vectors">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Auxiliary_Data"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Light_Curve"/>
+        <skos:prefLabel>Co-Trending Basis Vectors</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Code -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Code">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Bash Script</skos:altLabel>
+        <skos:altLabel>Python</skos:altLabel>
+        <skos:altLabel>SQL</skos:altLabel>
+        <skos:altLabel>Script</skos:altLabel>
+        <skos:altLabel>Shell Script</skos:altLabel>
+        <skos:altLabel>Software</skos:altLabel>
+        <skos:prefLabel>Code</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Coronagraphic_Image -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Coronagraphic_Image">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Image"/>
+        <skos:hiddenLabel>Coronagraph Image</skos:hiddenLabel>
+        <skos:prefLabel>Coronagraphic Image</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Cylindrically_Projected_Image -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Cylindrically_Projected_Image">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Image"/>
+        <skos:altLabel>Cylindrical Projection</skos:altLabel>
+        <skos:prefLabel>Cylindrically Projected Image</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Cylindrically_Projected_Mosaic -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Cylindrically_Projected_Mosaic">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Cylindrically_Projected_Image"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Image_Mosaic"/>
+        <skos:altLabel>Cylindrical Projection</skos:altLabel>
+        <skos:prefLabel>Cylindrically Projected Mosaic</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Dark_Frame -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Dark_Frame">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Calibration_Data"/>
+        <skos:hiddenLabel>Darks</skos:hiddenLabel>
+        <skos:prefLabel>Dark Frame</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Data_Validation_Report -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Data_Validation_Report">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Information"/>
+        <skos:prefLabel>Data Validation Report</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Doppler_Image -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Doppler_Image">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Image"/>
+        <skos:altLabel>Doppler Map</skos:altLabel>
+        <skos:prefLabel>Doppler Image</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Drizzled_Mosaic -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Drizzled_Mosaic">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Image_Mosaic"/>
+        <skos:altLabel>Drizzled Image</skos:altLabel>
+        <skos:prefLabel>Drizzled Mosaic</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Ephemeris -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Ephemeris">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Source_Catalog"/>
+        <skos:hiddenLabel>Ephemerides</skos:hiddenLabel>
+        <skos:prefLabel>Ephemeris</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Error_Map -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Error_Map">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Auxiliary_Data"/>
+        <skos:altLabel>Uncertainties Map</skos:altLabel>
+        <skos:hiddenLabel>Errors</skos:hiddenLabel>
+        <skos:hiddenLabel>Uncertainties</skos:hiddenLabel>
+        <skos:prefLabel>Error Map</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Events -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Events">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Event File</skos:altLabel>
+        <skos:altLabel>Photon Database</skos:altLabel>
+        <skos:prefLabel>Events</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Exposure_Map -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Exposure_Map">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Auxiliary_Data"/>
+        <skos:altLabel>Exposure Image</skos:altLabel>
+        <skos:altLabel>Exposure Time</skos:altLabel>
+        <skos:hiddenLabel>Expmap</skos:hiddenLabel>
+        <skos:prefLabel>Exposure Map</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Flat_Field -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Flat_Field">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Calibration_Data"/>
+        <skos:hiddenLabel>Flats</skos:hiddenLabel>
+        <skos:prefLabel>Flat Field</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Full_Frame_Image -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Full_Frame_Image">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Time_Series_Image"/>
+        <skos:hiddenLabel>FFI</skos:hiddenLabel>
+        <skos:hiddenLabel>TESS Full Frame Image</skos:hiddenLabel>
+        <skos:prefLabel>Full Frame Image</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#HEALPixel_Map -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#HEALPixel_Map">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Image"/>
+        <skos:altLabel>HEALPix Map</skos:altLabel>
+        <skos:prefLabel>HEALPixel Map</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Image -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Image">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Map</skos:altLabel>
+        <skos:hiddenLabel>Imaging</skos:hiddenLabel>
+        <skos:prefLabel>Image</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Image_Mosaic -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Image_Mosaic">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Image"/>
+        <skos:hiddenLabel>Mosaic Image</skos:hiddenLabel>
+        <skos:prefLabel>Image Mosaic</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Image_Stack -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Image_Stack">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Image"/>
+        <skos:prefLabel>Image Stack</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Information -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Information">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Human-Readable Information</skos:altLabel>
+        <skos:altLabel>Metadata</skos:altLabel>
+        <skos:altLabel>Supplement</skos:altLabel>
+        <skos:prefLabel>Information</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Interferometric_Image -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Interferometric_Image">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Image"/>
+        <skos:altLabel>Interferometry</skos:altLabel>
+        <skos:prefLabel>Interferometric Image</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Light_Curve -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Light_Curve">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Time_Series"/>
+        <skos:hiddenLabel>Light-curve</skos:hiddenLabel>
+        <skos:hiddenLabel>Lightcurve</skos:hiddenLabel>
+        <skos:prefLabel>Light Curve</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Mask -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Mask">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Region"/>
+        <skos:prefLabel>Mask</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Measurements_Table -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Measurements_Table">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Catalog</skos:altLabel>
+        <skos:hiddenLabel>Catalogue</skos:hiddenLabel>
+        <skos:hiddenLabel>Measurement Table</skos:hiddenLabel>
+        <skos:prefLabel>Measurements Table</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Navigated_Image -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Navigated_Image">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Image"/>
+        <skos:prefLabel>Navigated Image</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Noise_Map -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Noise_Map">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Auxiliary_Data"/>
+        <skos:altLabel>Signal to Noise</skos:altLabel>
+        <skos:hiddenLabel>Noise</skos:hiddenLabel>
+        <skos:hiddenLabel>SNR</skos:hiddenLabel>
+        <skos:prefLabel>Noise Map</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Photometry_Catalog -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Photometry_Catalog">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Source_Catalog"/>
+        <skos:altLabel>Magnitudes</skos:altLabel>
+        <skos:hiddenLabel>Photometric Catalog</skos:hiddenLabel>
+        <skos:prefLabel>Photometry Catalog</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Polarimetry -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Polarimetry">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:hiddenLabel>Polarization</skos:hiddenLabel>
+        <skos:prefLabel>Polarimetry</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Power_Spectrum -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Power_Spectrum">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:hiddenLabel>Power Spectra</skos:hiddenLabel>
+        <skos:prefLabel>Power Spectrum</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Redshift_Catalog -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Redshift_Catalog">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Source_Catalog"/>
+        <skos:prefLabel>Redshift Catalog</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Region -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Region">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Auxiliary_Data"/>
+        <skos:altLabel>Footprint</skos:altLabel>
+        <skos:altLabel>Polygon</skos:altLabel>
+        <skos:prefLabel>Region</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Source_Catalog -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Source_Catalog">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Measurements_Table"/>
+        <skos:hiddenLabel>Source Catalogue</skos:hiddenLabel>
+        <skos:prefLabel>Source Catalog</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Spectral_Energy_Distribution -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Spectral_Energy_Distribution">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:related rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Spectrum"/>
+        <skos:altLabel>Composite Spectrum</skos:altLabel>
+        <skos:altLabel>SED</skos:altLabel>
+        <skos:hiddenLabel>Spectra</skos:hiddenLabel>
+        <skos:hiddenLabel>Spectroscopy</skos:hiddenLabel>
+        <skos:hiddenLabel>Spectrum</skos:hiddenLabel>
+        <skos:prefLabel>Spectral Energy Distribution</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Spectral_Line_List -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Spectral_Line_List">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Measurements_Table"/>
+        <skos:hiddenLabel>Linelist</skos:hiddenLabel>
+        <skos:prefLabel>Spectral Line List</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Spectral_image -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Spectral_image">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Image"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Spectrum"/>
+        <skos:altLabel>Cube</skos:altLabel>
+        <skos:altLabel>Hyperspectral Image</skos:altLabel>
+        <skos:altLabel>Imaging Spectroscopy</skos:altLabel>
+        <skos:hiddenLabel>Hyperspectral Imaging</skos:hiddenLabel>
+        <skos:hiddenLabel>Spectral Imaging</skos:hiddenLabel>
+        <skos:prefLabel>Spectral Image</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Spectropolarimetry -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Spectropolarimetry">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Polarimetry"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Spectrum"/>
+        <skos:hiddenLabel>Polarimetry Spectrum</skos:hiddenLabel>
+        <skos:prefLabel>Spectropolarimetry</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Spectrum -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Spectrum">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:related rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Spectral_Energy_Distribution"/>
+        <skos:hiddenLabel>Spectra</skos:hiddenLabel>
+        <skos:hiddenLabel>Spectroscopy</skos:hiddenLabel>
+        <skos:prefLabel>Spectrum</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Spectrum_Stack -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Spectrum_Stack">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Spectrum"/>
+        <skos:prefLabel>Spectrum Stack</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Stacked_Image -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Stacked_Image">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Image"/>
+        <skos:prefLabel>Stacked Image</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Target_Pixel_File -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Target_Pixel_File">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Time_Series_Image"/>
+        <skos:hiddenLabel>TESS Target Pixel File</skos:hiddenLabel>
+        <skos:hiddenLabel>TPF</skos:hiddenLabel>
+        <skos:prefLabel>Target Pixel File</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Time_Series -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Time_Series">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Time Domain</skos:altLabel>
+        <skos:hiddenLabel>Time-series</skos:hiddenLabel>
+        <skos:hiddenLabel>Timeseries</skos:hiddenLabel>
+        <skos:prefLabel>Time Series</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Time_Series_Image -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Time_Series_Image">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Image"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Time_Series"/>
+        <skos:altLabel>Cube</skos:altLabel>
+        <skos:altLabel>Dynamic Image</skos:altLabel>
+        <skos:hiddenLabel>Time-Series Image</skos:hiddenLabel>
+        <skos:prefLabel>Time Series Image</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Time_Series_Spectrum -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Time_Series_Spectrum">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Spectrum"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Time_Series"/>
+        <skos:altLabel>Dynamic Spectrum</skos:altLabel>
+        <skos:hiddenLabel>Time Series Spectra</skos:hiddenLabel>
+        <skos:hiddenLabel>Time-Series Spectra</skos:hiddenLabel>
+        <skos:hiddenLabel>Time-Series Spectrum</skos:hiddenLabel>
+        <skos:prefLabel>Time Series Spectrum</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Visibility_Data -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Visibility_Data">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Interferometric_Image"/>
+        <skos:hiddenLabel>Interferometric Visibilities</skos:hiddenLabel>
+        <skos:hiddenLabel>Interferometry</skos:hiddenLabel>
+        <skos:hiddenLabel>Visibilities</skos:hiddenLabel>
+        <skos:prefLabel>Visibility Data</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Wavelength_Calibration -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Wavelength_Calibration">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Calibration_Data"/>
+        <skos:altLabel>Wavecal</skos:altLabel>
+        <skos:prefLabel>Wavelength Calibration</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-dtype#Weight_Map -->
+
+    <owl:NamedIndividual rdf:about="https://archive.stsci.edu/rdf/hlsp-dtype#Weight_Map">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-dtype#Auxiliary_Data"/>
+        <skos:hiddenLabel>Weightmap</skos:hiddenLabel>
+        <skos:hiddenLabel>Weights</skos:hiddenLabel>
+        <skos:prefLabel>Weight Map</skos:prefLabel>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <foaf:name>MAST Staff</foaf:name>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
