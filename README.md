@@ -1,5 +1,5 @@
 # mast_hlsp-vocab
-Draft SKOS vocabularies by MAST staff.
+Draft vocabularies by MAST staff, currently focused on HLSPs. Currently an extremely preliminary rough draft---intended as a starting place for conversations, and as something for developers to use while working on prototypes.
 
 Current notional draft schematic:
 
