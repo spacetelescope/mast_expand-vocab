@@ -1,0 +1,186 @@
+SIMBAD Id,SIMBAD Label,SIMBAD Description,SKOS relationship,UAT match,ABL comments,SIMBAD_category,SIMBAD_subcategory,SIMBAD's comment,SIMBAD's status
+?,Unknown,Object of Unknown Nature,,,Could be valuable to add to the UAT.,"8. BLENDS, ERRORS, NOT WELL DEFINED OBJECTS",,,
+..1,,{pr*} Pre-Main Sequence Star ,exactMatch,"Pre-main sequence stars, Young stellar objects",SIMBAD has defined Pre-Main Squence Star as equal to YSO.,1. TAXONOMY OF STARS,Young Stellar Objects (Pre-Main Sequence Stars),,old
+..10,,Barium Star,exactMatch,Barium stars,"References to the ""SpT"" in the SIMBAD comment generally mean that SIMBAD has deprecated a concept in favor of handling it in measurement criteria filtering (see https://simbad.u-strasbg.fr/simbad/sim-fsam).",1. TAXONOMY OF STARS,Chemically Peculiar Stars,Check the SpT,old
+..11,,Dwarf Carbon Star,broadMatch,Carbon stars,"(Typically ""carbon stars"" are defined as giants, so would be an inappropriate metatag. Wikipedia suggests classical vs. non-classical? But check ADS.)",1. TAXONOMY OF STARS,Chemically Peculiar Stars,Maintype = Pe* and SpT like dC,old
+..12,,Carbon-Enhanced Metal Poor Star,exactMatch,CEMP stars,,1. TAXONOMY OF STARS,Chemically Peculiar Stars,Maintype = Pe* and SpT like CEMP,old
+..13,,{Al*} Eclipsing Binary of Algol type,exactMatch,Algol variable stars,,1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,Check biblio or V* measurements,old
+..14,,{bL*}Eclipsing Binary of beta Lyr type,exactMatch,Beta lyrae stars,,1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,Check biblio or V* measurements,old
+..15,,{WU*} Eclipsing Binary of W UMa type,exactMatch,W Ursae Majoris variable stars,UAT would benefit from an altLabel in commonly-abbreviated cases like this.,1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,Check biblio or V* measurements,old
+..16,,{NL*} Nova-like Binary,exactMatch,Nova-like variable stars,,1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,Check biblio or V* measurements,old
+..17,,{DN*} Dwarf Nova,exactMatch,Dwarf novae,,1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,Check biblio or V* measurements,old
+..18,,{DQ*} CV of DQ Her type  Intermediate polar.,exactMatch,DQ Herculis stars,,1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,Check biblio or V* measurements,old
+..19,,{AM*} CV of AM CVn type,exactMatch,AM Canum Venaticorum stars,,1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,Check biblio or V* measurements,old
+..2,,LBV=Luminous Blue Variable,exactMatch,Luminous blue variable stars,Possibly should be subtagged to Early-type supergiant stars in the UAT.,1. TAXONOMY OF STARS,Massive Stars and their Remnants,Maintype = s*b and SpT like LBV,old
+..20,,Irregular Variable with rapid variations,broadMatch,Irregular variable stars,,1. TAXONOMY OF STARS,Properties . variability. spectral. kinematic or environment,Check biblio or V* measurements,old
+..21,,{Fl*} Flare Star,exactMatch,Flare stars,,1. TAXONOMY OF STARS,Properties . variability. spectral. kinematic or environment,See Er*,old
+..22,,Star showing Eclipses by its Planet,broadMatch,Planet hosting stars,,1. TAXONOMY OF STARS,Properties . variability. spectral. kinematic or environment,See EB* and V* measurements,old
+..23,,{*iC} Star towards a Cluster,relatedMatch,Star clusters,,1. TAXONOMY OF STARS,Kinematic and Environment Properties,Check hierarchical links,old
+..24,,{*iA} Star towards an Association,relatedMatch,Stellar associations,,1. TAXONOMY OF STARS,Kinematic and Environment Properties,Check hierarchical links,old
+..25,,{*iN} Star towards a Nebula,relatedMatch,Nebulae,,1. TAXONOMY OF STARS,Kinematic and Environment Properties,Check hierarchical links,old
+..26,,{*i*} Star in double system,,,,1. TAXONOMY OF STARS,Kinematic and Environment Properties,Check hierarchical links,old
+..27,,{BNe} Bright Nebula,exactMatch,Bright nebulae,,3. INTERSTELLAR MEDIUM,Nebula,,old
+..28,,{HzG} Galaxy with high redshift,exactMatch,High-redshift galaxies,,4. TAXONOMY OF GALAXIES,,Redundant with the redshift value,old
+..29,,"{ERO} ERO/VRO, Extremely/Very Red Object",closeMatch,Infrared galaxies,,4. TAXONOMY OF GALAXIES,,Check biblio or SED,old
+..3,,{FU*} FU Ori Variable,exactMatch,FU Orionis stars,,1. TAXONOMY OF STARS,Young Stellar Objects (Pre-Main Sequence Stars),See Or*,old
+..30,,"ULIRG, Ultra Luninous Infrared Galaxy",exactMatch,Ultraluminous infrared galaxies,,4. TAXONOMY OF GALAXIES,,Check biblio or SED,old
+..31,,"{LyA, DLA, mAL, LLS, BAL} Absorption Line System","relatedMatch, exactMatch, ?????, exactMatch, closeMatch","Lyman alpha forest, Damped Lyman-alpha systems, ?????, Lyman limit systems, Broad-absorption line quasar","Multiple concepts, comma-separated. Not sure what mAL means.",4. TAXONOMY OF GALAXIES,,Check biblio or SED,old
+..32,,{red} Very Red Source,broadMatch,Infrared sources,,7. GENERAL SPECTRAL PROPERTIES,,,old
+..4,,Red Clump Star,relatedMatch,Red giant clump,"UAT could benefit from a ""Red giant clump stars"" concept (subtagged to horizontal branch stars?).",1. TAXONOMY OF STARS,Evolved Stars,See HB*,old
+..5,,{sr*} Semi-Regular Variable,exactMatch,Semi-regular variable stars,,1. TAXONOMY OF STARS,Evolved Stars,Check LP* and V* measurements,old
+..6,,O-rich AGB Star,broadMatch,Asymptotic giant branch stars AND,"Most AGBs are O-rich, so this is often treated as the ""default"". UAT could benefit from a broad ""Oxygen-rich stars"" concept (in contrast to carbons stars and S stars), though ""Oxygen-rich (subtype) stars"" might be going overboard.",1. TAXONOMY OF STARS,Evolved Stars,Maintype = AB* and SpT like M or O-rich,old
+..7,,{ZZ*} Pulsating White Dwarf,broadMatch,White dwarf stars AND Pulsating variable stars,and narrowMatch to ZZ Ceti stars,1. TAXONOMY OF STARS,Evolved Stars,"Maintype = WD*, secondary type = Pu*",old
+..8,,ELMWD=Extremely Low Mass White Dwarf,broadMatch,White dwarf stars AND Low mass stars,"Probably not a useful concept (following AO3 practice, intensifiers like ""extremely"" and ""very"" may often not merit their own tag).",1. TAXONOMY OF STARS,Evolved Stars,In binaries; SpT like ELMD,old
+..9,,CH Star,exactMatch,CH stars,,1. TAXONOMY OF STARS,Chemically Peculiar Stars,Check the SpT,old
+*,Star,Star,exactMatch,Stellar types,,1. TAXONOMY OF STARS,,,
+**,**,Double or Multiple Star,exactMatch,Multiple stars,"SIMBAD does *not* mean the UAT concept ""Optical double stars"". This is their parent concept for systems with multiple stars and and ""close proper motion systems"" (the latter might be a concept worth consideration).",1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,Interacting binaries and close CPM systems,
+a2*,alf2CVnV*,alpha2 CVn Variable,exactMatch,Rapidly oscillating Ap star,,1. TAXONOMY OF STARS,Chemically Peculiar Stars,Ap stars; magnetic,
+AB*,AGB*,Asymptotic Giant Branch Star,exactMatch,Asymptotic giant branch stars,,1. TAXONOMY OF STARS,Evolved Stars,,
+Ae*,Ae*,Herbig Ae/Be Star,exactMatch,Herbig Ae/Be stars,,1. TAXONOMY OF STARS,Young Stellar Objects (Pre-Main Sequence Stars),,
+AGN,AGN,Active Galaxy Nucleus,exactMatch,Active galactic nuclei,,4. TAXONOMY OF GALAXIES,,,
+As*,Association,Association of Stars,exactMatch,Stellar associations,,2. SETS OF STARS,,,
+bC*,bCepV*,beta Cep Variable,exactMatch,Beta Cephei variable stars,SIMBAD has them also subtagged to Massive stars.,1. TAXONOMY OF STARS,Massive Stars and their Remnants,,
+bCG,BlueCompactG,Blue Compact Galaxy,broadMatch,Compact galaxies,"Likely narrowMatch in Blue compact dwarf galaxies. https://arxiv.org/pdf/0903.2861.pdf ""those BCGs less luminous than [cutoff] are commonly referred to as ""blue compact dwarfs"". (PS, ""Compact dwarf galaxies"" should probably be subtagged to ""Compact galaxies"".)",4. TAXONOMY OF GALAXIES,,,
+BD*,BrownD*,Brown Dwarf,exactMatch,Brown dwarfs,,1. TAXONOMY OF STARS,Low mass Stars and substellar Objects,"SpT L,T or Y",
+Be*,Be*,Be Star,exactMatch,Be stars,,1. TAXONOMY OF STARS,Main Sequence Stars,,
+BH,BlackHole,Black Hole,exactMatch,Astrophysical black holes,,6. GRAVITATION,,,new
+BiC,BrightestCG,Brightest Galaxy in a Cluster (BCG),exactMatch,Brightest cluster galaxies,,4. TAXONOMY OF GALAXIES,Environment properties,,
+Bla,Blazar,Blazar,exactMatch,Blazars,,4. TAXONOMY OF GALAXIES,,,
+BLL,BLLac,BL Lac,exactMatch,BL Lacertae objects,,4. TAXONOMY OF GALAXIES,,,
+blu,blue,Blue Object,,,,7. GENERAL SPECTRAL PROPERTIES,,"Mostly WD*, HS*, blue HB*, QSO",
+BS*,BlueStraggler,Blue Straggler,exactMatch,Blue straggler stars,"SIMBAD has them subtagged to main sequence stars, but I think they're post-main sequence?",1. TAXONOMY OF STARS,Main Sequence Stars,,
+bub,Bubble,Bubble,broadMatch,Interstellar medium,narrowMatch in Stellar wind bubbles AND Superbubbles. An umbrella term here in the UAT might be useful.,3. INTERSTELLAR MEDIUM,,,
+BY*,BYDraV*,BY Dra Variable,exactMatch,BY Draconis stars,"SIMBAD has them subtagged to binaries, but I think the usual interpretation is starspots.",1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,,
+C*,C*,Carbon Star,exactMatch,Carbon stars,"Possibly a bit different; SIMBAD has them subtagged to evolved stars, while UAT structure does not (despite the definition in the UAT). See note above for Dwarf carbon star.",1. TAXONOMY OF STARS,Evolved Stars,"Mostly AGB or RGB. SpT like C,N,R C-N,C-R, or C-rich",
+cC*,ClassicalCep,Classical Cepheid Variable,exactMatch,Delta Cepheid variable stars,"UAT incorrectly has ""Classical cepheid"" as a synonym to ""Cepheid variable stars""; this altLabel should be moved to ""Delta Cepheid variable stars"". Additional metatags could be added to the latter (but not the former) along the lines of evolved stars.",1. TAXONOMY OF STARS,Evolved Stars,delta Cep type,
+Ce*,Cepheid,Cepheid Variable,exactMatch,Cepheid Variable,,1. TAXONOMY OF STARS,Evolved Stars,Includes anomalous Cepheids,
+CGb,ComGlob,Cometary Globule / Pillar,closeMatch,Cometary globules,,3. INTERSTELLAR MEDIUM,,,
+CGG,Compact_Gr_G,Compact Group of Galaxies,closeMatch,Hickson compact group,"Currently, UAT has ""Compact group of galaxies"" as an altLabel to Hickson compact group. I would switch the prefLabel and the altLabel here.",5. SETS OF GALAXIES,,,
+Cl*,Cluster*,Cluster of Stars,exactMatch,Star clusters,,2. SETS OF STARS,,,
+Cld,Cloud,Cloud,exactMatch,Interstellar clouds,,3. INTERSTELLAR MEDIUM,,,
+ClG,ClG,Cluster of Galaxies,exactMatch,Galaxy clusters,,5. SETS OF GALAXIES,,,
+cm,cmRad,Centimetric Radio Source,broadMatch,Radio sources,,7. GENERAL SPECTRAL PROPERTIES,,,
+cor,denseCore,Dense Core,closeMatch,Collapsing clouds,,3. INTERSTELLAR MEDIUM,,"N(H) > ~1D23 at/cm2, or detection of NH3,HCN,CS,HCO,..",
+CV*,CataclyV*,Cataclysmic Binary,exactMatch,Cataclysmic variable stars,,1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,,
+DNe,DarkNeb,Dark Cloud (nebula),exactMatch,Dark interstellar clouds,,3. INTERSTELLAR MEDIUM,,,
+dS*,delSctV*,delta Sct Variable,exactMatch,Delta Scuti variable stars,,1. TAXONOMY OF STARS,Main Sequence Stars,See Pu* for candidate,
+EB*,EclBin,Eclipsing Binary,exactMatch,Eclipsing binary stars,,1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,,
+El*,EllipVar,Ellipsoidal Variable,exactMatch,Ellipsoidal variable stars,,1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,,
+Em*,EmLine*,Emission-line Star,exactMatch,Emission line stars,,1. TAXONOMY OF STARS,Spectral properties,"Can be sg*, YSO, Be*, AB*, Sy*, etc...",
+EmG,EmissionG,Emission-line galaxy,exactMatch,Emission line galaxies,,4. TAXONOMY OF GALAXIES,,,
+EmO,EmObj,Emission Object,broadMatch,Astronomical radiation sources,narrowMatch in Emission line stars AND Emission line galaxies,7. GENERAL SPECTRAL PROPERTIES,,"Mostly YSO, Em*, PNe, WR*, Sy*, Galaxies, AGN, QSO",
+Er*,Eruptive*,Eruptive Variable,exactMatch,Eruptive variable stars,,1. TAXONOMY OF STARS,Properties . variability. spectral. kinematic or environment,,
+err,Inexistent,"Not an Object (Error, Artefact, ...)",,,Could be valuable to add to the UAT.,"8. BLENDS, ERRORS, NOT WELL DEFINED OBJECTS",,,
+ev,Transient,Transient Event,exactMatch,Transient sources,,7. GENERAL SPECTRAL PROPERTIES,,,
+Ev*,Evolved*,Evolved Star,exactMatch,Evolved stars,,1. TAXONOMY OF STARS,Evolved Stars,Post-Main Sequence,new
+FIR,FarIR,Far-IR source (λ >= 30 µm),broadMatch,Infrared sources,,7. GENERAL SPECTRAL PROPERTIES,,"e.g. IRAS 60/100, AKARI-FIS, Hershel",
+flt,Filament,Interstellar Filament,exactMatch,Interstellar filaments,,3. INTERSTELLAR MEDIUM,,,
+G,Galaxy,Galaxy,exactMatch,Galaxies,,4. TAXONOMY OF GALAXIES,,,
+gam,gamma,Gamma-ray Source,exactMatch,Gamma-ray sources,,7. GENERAL SPECTRAL PROPERTIES,,,
+gB,gammaBurst,Gamma-ray Burst,exactMatch,Gamma-ray bursts,,7. GENERAL SPECTRAL PROPERTIES,,,
+gD*,gammaDorV*,gamma Dor Variable,exactMatch,Gamma Doradus variable stars,,1. TAXONOMY OF STARS,Main Sequence Stars,See Pu* for candidate,
+GiC,GtowardsCl,Galaxy towards a Cluster of Galaxies,relatedMatch,Galaxy clusters,,4. TAXONOMY OF GALAXIES,Environment properties,Check hierarchical links,
+GiG,GtowardsGroup,Galaxy towards a Group of Galaxies,relatedMatch,Galaxy groups,,4. TAXONOMY OF GALAXIES,Environment properties,Check hierarchical links,
+GiP,GinPair,Galaxy in Pair of Galaxies,relatedMatch,Galaxy pairs,,4. TAXONOMY OF GALAXIES,Environment properties,,
+glb,Globule,Globule (low-mass dark cloud),broadMatch,Dark interstellar clouds,Uncertain.,3. INTERSTELLAR MEDIUM,,,
+GlC,GlobCluster,Globular Cluster,exactMatch,Globular star clusters,,2. SETS OF STARS,,,
+gLe,GravLens,Gravitational Lens,exactMatch,Gravitational lensing,,6. GRAVITATION,,,
+gLS,GravLensSystem,Gravitational Lens System (lens+images),closeMatch,Gravitational lensing,Possibly an umbrella term for lensed images like Einstein rings could be useful in the UAT.,6. GRAVITATION,,,
+GNe,GalNeb,Nebula,exactMatch,Nebulae,,3. INTERSTELLAR MEDIUM,,,
+GrG,GroupG,Group of Galaxies,exactMatch,Galaxy groups,,5. SETS OF GALAXIES,,,
+grv,Gravitation,Gravitational Source,broadMatch,General relativity,narrowMatch in Gravitational wave sources. SIMBAD concept of Gravitational source is apparently meant to capture both lensing and gravitational waves.,6. GRAVITATION,,,
+GWE,GravWaveEvent,Gravitational Wave Event,closeMatch,Gravitational wave sources,,6. GRAVITATION,,,
+H2G,HIIG,HII Galaxy,broadMatch,Starburst galaxies,relatedMatch in H II regions.,4. TAXONOMY OF GALAXIES,,,
+HB*,HorBranch*,Horizontal Branch Star,exactMatch,Horizontal branch stars,UAT should subtag to evolved stars (along with AGB and post-AGB).,1. TAXONOMY OF STARS,Evolved Stars,,
+HH,HerbigHaroObj,Herbig-Haro Object,exactMatch,Herbig-Haro objects,,1. TAXONOMY OF STARS,Young Stellar Objects (Pre-Main Sequence Stars),,
+HI,HI,HI (21cm) Source,closeMatch,H I line emission,narrowMatch in H I regions,7. GENERAL SPECTRAL PROPERTIES,,,
+HII,HIIReg,HII Region,exactMatch,H II regions,,3. INTERSTELLAR MEDIUM,,,
+HS*,HotSubdwarf,Hot Subdwarf,broadMatch,Subdwarf stars,narrowMatch in O subdwarf stars AND B subdwarf stars.,1. TAXONOMY OF STARS,Evolved Stars,"SpT like sdB, sdO",
+HV*,HighVel*,High Velocity Star,exactMatch,High-velocity stars,,1. TAXONOMY OF STARS,Kinematic and Environment Properties,,
+HVC,HVCld,High-velocity Cloud,exactMatch,High-velocity clouds,,3. INTERSTELLAR MEDIUM,,Vlsr > ~90 km/s,
+HXB,HighMassXBin,High Mass X-ray Binary,exactMatch,High mass x-ray binary stars,,1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,,
+IG,InteractingG,Interacting Galaxies,exactMatch,Interacting galaxies,,5. SETS OF GALAXIES,,,
+IR,Infrared,Infra-Red Source,exactMatch,Infrared sources,,7. GENERAL SPECTRAL PROPERTIES,,,
+Ir*,IrregularV*,Irregular Variable,exactMatch,Irregular variable stars,,1. TAXONOMY OF STARS,Properties . variability. spectral. kinematic or environment,,
+ISM,ISM,Interstellar Medium Object,exactMatch,Interstellar medium,,3. INTERSTELLAR MEDIUM,,,
+LeG,LensedG,Gravitationally Lensed Image of a Galaxy,broadMatch,Gravitational lensing,Possibly an umbrella term for lensed images like Einstein rings could be useful in the UAT.,6. GRAVITATION,,,
+LeI,LensedImage,Gravitationally Lensed Image,broadMatch,Gravitational lensing,Possibly an umbrella term for lensed images like Einstein rings could be useful in the UAT.,6. GRAVITATION,,,
+LeQ,LensedQ,Gravitationally Lensed Image of a Quasar,broadMatch,Gravitational lensing,Possibly an umbrella term for lensed images like Einstein rings could be useful in the UAT.,6. GRAVITATION,,,
+Lev,LensingEv,(Micro)Lensing Event,closeMatch,Gravitational microlensing,,6. GRAVITATION,,,
+LIN,LINER,LINER-type Active Galaxy Nucleus,exactMatch,LINER galaxies,,4. TAXONOMY OF GALAXIES,,,
+LM*,Low-Mass*,Low-mass Star,exactMatch,Low mass stars,,1. TAXONOMY OF STARS,Low mass Stars and substellar Objects,M ~< 1 Mo,
+LP*,LongPeriodV*,Long-Period Variable,exactMatch,Long period variable stars,,1. TAXONOMY OF STARS,Evolved Stars,"AB*, RG*, or s*r. Includes L, SR, and OSARG",
+LSB,LowSurfBrghtG,Low Surface Brightness Galaxy,exactMatch,Low surface brightness galaxies,,4. TAXONOMY OF GALAXIES,,,
+LXB,LowMassXBin,Low Mass X-ray Binary,exactMatch,Low-mass x-ray binary stars,,1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,,
+Ma*,Massiv*,Massive Star,exactMatch,Massive stars,,1. TAXONOMY OF STARS,Massive Stars and their Remnants,Initial mass > 8-10 Mo,new
+Mas,Maser,Maser,exactMatch,Astrophysical masers,,7. GENERAL SPECTRAL PROPERTIES,,,
+MGr,MouvGroup,Moving Group,broadMatch,Stellar associations,"Not certain about this. Note: *not* a match for Moving clusters -""The category of moving groups is not to be confused with moving clusters."" https://sites.astro.caltech.edu/~george/ay20/eaa-starclus.pdf",2. SETS OF STARS,,,
+Mi*,Mira,Mira Variable,exactMatch,Mira variable stars,,1. TAXONOMY OF STARS,Evolved Stars,,
+MIR,MidIR,Mid-IR Source (3 to 30 µm),broadMatch,Infrared sources,,7. GENERAL SPECTRAL PROPERTIES,,"e.g. IRAS 12/25, AKARI-IRC, WISE, Spitzer-IRAC-MIPS",
+mm,mmRad,Millimetric Radio Source,broadMatch,Radio sources,,7. GENERAL SPECTRAL PROPERTIES,,,
+MoC,MolCld,Molecular Cloud,exactMatch,Molecular clouds,,3. INTERSTELLAR MEDIUM,,,
+mR,metricRad,Metric Radio Source,broadMatch,Radio sources,,7. GENERAL SPECTRAL PROPERTIES,,,
+MS*,MainSequence*,Main Sequence Star,exactMatch,Main sequence stars,,1. TAXONOMY OF STARS,Main Sequence Stars,Main Sequence,new
+mul,Blend,"Composite Object, Blend",exactMatch,,Could be valuable to add to the UAT.,"8. BLENDS, ERRORS, NOT WELL DEFINED OBJECTS",,,
+N*,Neutron*,Neutron Star,exactMatch,Neutron stars,,1. TAXONOMY OF STARS,Massive Stars and their Remnants,,
+NIR,NearIR,Near-IR Source (λ < 3 µm),broadMatch,Infrared sources,,7. GENERAL SPECTRAL PROPERTIES,,"JHK, 2MASS, UKIDSS, ...",
+No*,Nova,Classical Nova,exactMatch,Classical novae,,1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,,
+OH*,OH/IR*,OH/IR Star,exactMatch,OH/IR stars,,1. TAXONOMY OF STARS,Evolved Stars,"O-rich AGB or PAGB, doubled-peaked OH maser profile",
+OpC,OpenCluster,Open Cluster,exactMatch,Open star clusters,,2. SETS OF STARS,,,
+Opt,Optical,Optical Source,exactMatch,Visible sources,"""Optical sources"" is probably better.",7. GENERAL SPECTRAL PROPERTIES,,Corresponding to BVRI range,new
+Or*,OrionV*,Orion Variable,broadMatch,Young stellar objects,narrowMatch in FU Orionis stars AND T Tauri stars.,1. TAXONOMY OF STARS,Young Stellar Objects (Pre-Main Sequence Stars),,
+out,Outflow,Outflow,relatedMatch,Jets,"Too vague to be useful except as an umbrella term across multiple categories of objects (AGN, stars, YSOs, SNRs, etc.). Also, in old SIMBAD vocab this was subtagged to SNRs, and I wonder if they cleaned up their database when they moved it to YSOs.",1. TAXONOMY OF STARS,Young Stellar Objects (Pre-Main Sequence Stars),,
+pA*,post-AGB*,Post-AGB Star,exactMatch,Post-asymptotic giant branch stars,Could be subtagged to Evolved stars.,1. TAXONOMY OF STARS,Evolved Stars,,
+PaG,PairG,Pair of Galaxies,exactMatch,Galaxy pairs,,5. SETS OF GALAXIES,,,
+PCG,protoClG,Proto Cluster of Galaxies,broadMatch,Galaxy clusters,"If added to the UAT, would need to be disambiguated from ""Protoclusters"" which is currently for stars.",5. SETS OF GALAXIES,,,
+Pe*,ChemPec*,Chemically Peculiar Star,exactMatch,Chemically peculiar stars,,1. TAXONOMY OF STARS,Chemically Peculiar Stars,Includes metal-poor stars,
+Pl,Planet,Extra-solar Planet,exactMatch,Exoplanets,,1. TAXONOMY OF STARS,Low mass Stars and substellar Objects,,
+PM*,HighPM*,High Proper Motion Star,relatedMatch,Proper motions,"Would be valuable to add to the UAT, somewhere.",1. TAXONOMY OF STARS,Kinematic and Environment Properties,Total proper motion >= 50 mas/yr,
+PN,PlanetaryNeb,Planetary Nebula,exactMatch,Protoplanetary nebulae,,1. TAXONOMY OF STARS,Evolved Stars,Includes the progenitor Star when knwon,
+PoC,PartofCloud,Part of Cloud,relatedMatch,Interstellar clouds,,"8. BLENDS, ERRORS, NOT WELL DEFINED OBJECTS",,,
+PoG,PartofG,Part of a Galaxy,relatedMatch,Galaxies,,"8. BLENDS, ERRORS, NOT WELL DEFINED OBJECTS",,,
+Psr,Pulsar,Pulsar,exactMatch,Pulsars,,1. TAXONOMY OF STARS,Massive Stars and their Remnants,,
+Pu*,PulsV*,Pulsating Variable,exactMatch,Pulsating variable stars,,1. TAXONOMY OF STARS,Properties . variability. spectral. kinematic or environment,Non LPV Pulsating Star,
+QSO,QSO,Quasar,exactMatch,Quasars,,4. TAXONOMY OF GALAXIES,,,
+Rad,Radio,Radio Source,exactMatch,Radio sources,,7. GENERAL SPECTRAL PROPERTIES,,,
+rB,radioBurst,Radio Burst,exactMatch,Radio bursts,Should add an altLabel for Fast Radio Bursts / FRBs.,7. GENERAL SPECTRAL PROPERTIES,,,
+RC*,RCrBV*,R CrB Variable,exactMatch,R Coronae Borealis variable stars,Could probably do with some more metatags.,1. TAXONOMY OF STARS,Chemically Peculiar Stars,,
+reg,Region,Region defined in the Sky,,,,"8. BLENDS, ERRORS, NOT WELL DEFINED OBJECTS",,,
+rG,RadioG,Radio Galaxy,exactMatch,Radio galaxies,,4. TAXONOMY OF GALAXIES,,,
+RG*,RGB*,Red Giant Branch star,closeMatch,Red giant stars,"UAT may need a separate concept for ""Red giant branch stars"" subtagged to ""Red giant stars"", which is often used as a vague umbrella term. Or it may be best to avoid ""red giant stars"" as a concept and stick to ""red giant branch stars"".",1. TAXONOMY OF STARS,Evolved Stars,,
+RNe,RefNeb,Reflection Nebula,exactMatch,Reflection nebulae,,3. INTERSTELLAR MEDIUM,,,
+Ro*,RotV*,Rotating Variable,,,Complex issues here to do with the way stellar variability types are structured in the UAT.,1. TAXONOMY OF STARS,Properties . variability. spectral. kinematic or environment,,
+RR*,RRLyrae,RR Lyrae Variable,exactMatch,RR Lyrae variable stars,Worth thinking about adding metatags to this in the UAT.,1. TAXONOMY OF STARS,Evolved Stars,,
+RS*,RSCVnV*,RS CVn Variable,exactMatch,RS Canum Venaticorum variable stars,"UAT should subtag to Binary stars, I think.",1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,,
+RV*,RVTauV*,RV Tauri Variable,exactMatch,RV Tauri variable stars,,1. TAXONOMY OF STARS,Evolved Stars,,
+S*,S*,S Star,exactMatch,S stars,,1. TAXONOMY OF STARS,Evolved Stars,"Mostly AGB or RGB. SpT like S,SC,MS",
+s*b,BlueSG,Blue Supergiant,exactMatch,Early-type supergiant stars,,1. TAXONOMY OF STARS,Massive Stars and their Remnants,"SpT like O/B 0,Ia,Iab,(I)",
+s*r,RedSG,Red Supergiant,closeMatch,Late-type supergiant stars,,1. TAXONOMY OF STARS,Massive Stars and their Remnants,"SpT like K/M 0,Ia,Iab,(I)",
+s*y,YellowSG,Yellow Supergiant,broadMatch,Supergiant stars,narrowMatch in F supergiant stars AND G supergiant stars (and debateably K supergiant stars).,1. TAXONOMY OF STARS,Massive Stars and their Remnants,"SpT like F/G 0,Ia,Iab,(I)",
+SB*,SB*,Spectroscopic Binary,exactMatch,Spectroscopic binary stars,,1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,,
+SBG,StarburstG,Starburst Galaxy,exactMatch,Starburst galaxies,,4. TAXONOMY OF GALAXIES,,,
+SCG,SuperClG,Supercluster of Galaxies,exactMatch,Superclusters,,5. SETS OF GALAXIES,,,
+SFR,StarFormingReg,Star Forming Region,exactMatch,Star forming regions,UAT should subtag to Interstellar medium.,3. INTERSTELLAR MEDIUM,,,
+sg*,Supergiant,Evolved Supergiant,exactMatch,,UAT should probably subtag Supergiant stars to Massive stars.,1. TAXONOMY OF STARS,Massive Stars and their Remnants,"Luminosity type 0,Ia,Iab,(I). Includes A-type SG",
+sh,HIshell,Interstellar Shell,exactMatch,Circumstellar shells,,3. INTERSTELLAR MEDIUM,,,
+smm,smmRad,Sub-Millimetric Source,broadMatch,Radio sources,,7. GENERAL SPECTRAL PROPERTIES,,,
+SN*,Supernova,SuperNova,exactMatch,Supernovae,,1. TAXONOMY OF STARS,SuperNovae,,
+SNR,SNRemnant,SuperNova Remnant,exactMatch,Supernova remnants,,3. INTERSTELLAR MEDIUM,,,
+St*,Stream,Stellar Stream,exactMatch,Stellar streams,,2. SETS OF STARS,,,
+SX*,SXPheV*,SX Phe Variable,exactMatch,SX Phoenicis variable stars,,1. TAXONOMY OF STARS,Main Sequence Stars,See Pu* for candidate,
+Sy*,Symbiotic*,Symbiotic Star,exactMatch,Symbiotic binary stars,,1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,,
+Sy1,Seyfert1,Seyfert 1 Galaxy,broadMatch,Seyfert galaxies,,4. TAXONOMY OF GALAXIES,,,
+Sy2,Seyfert2,Seyfert 2 Galaxy,broadMatch,Seyfert galaxies,,4. TAXONOMY OF GALAXIES,,,
+SyG,Seyfert,Seyfert Galaxy,exactMatch,Seyfert galaxies,,4. TAXONOMY OF GALAXIES,,,
+TT*,TTauri*,T Tauri Star,exactMatch,T Tauri stars,,1. TAXONOMY OF STARS,Young Stellar Objects (Pre-Main Sequence Stars),Includes classical and weak-line T Tauri,
+ULX,ULX,Ultra-luminous X-ray Source,exactMatch,Ultraluminous x-ray sources,,7. GENERAL SPECTRAL PROPERTIES,,,
+UV,UV,UV-emission Source,exactMatch,Ultraviolet sources,,7. GENERAL SPECTRAL PROPERTIES,,,
+V*,Variable*,Variable Star,exactMatch,Variable stars,,1. TAXONOMY OF STARS,Properties . variability. spectral. kinematic or environment,,
+var,Variable,Variable source,,,"An umbrella term in the UAT might be useful, but implementation might be tricky.",7. GENERAL SPECTRAL PROPERTIES,,,
+vid,Void,Underdense Region of the Universe,exactMatch,Voids,,5. SETS OF GALAXIES,,,
+WD*,WhiteDwarf,White Dwarf,exactMatch,White dwarf stars,Should the UAT's Stellar remnants be under Evolved stars? Worth thinking about.,1. TAXONOMY OF STARS,Evolved Stars,SpT like D and PG1159,
+WR*,WolfRayet*,Wolf-Rayet,exactMatch,Wolf-Rayet stars,"Some subtypes could probably be subtagged to Massive stars, but probbaly not all.",1. TAXONOMY OF STARS,Massive Stars and their Remnants,SpT like W,
+WV*,Type2Cep,Type II Cepheid Variable,exactMatch,Type II Cepheid variable stars,,1. TAXONOMY OF STARS,Evolved Stars,Includes W Wir and BL Her subtypes,
+X,X,X-ray Source,exactMatch,X-ray sources,,7. GENERAL SPECTRAL PROPERTIES,,,
+XB*,XrayBin,X-ray Binary,exactMatch,X-ray binary stars,,1. TAXONOMY OF STARS,Interacting Binaries and close Common Proper Motion Systems,,
+Y*O,YSO,Young Stellar Object,exactMatch,Young stellar objects,,1. TAXONOMY OF STARS,Young Stellar Objects (Pre-Main Sequence Stars),Pre-Main Sequence,
