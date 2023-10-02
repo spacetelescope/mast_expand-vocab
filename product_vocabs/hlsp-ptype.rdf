@@ -119,7 +119,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Light_curves"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Uncommon"/>
-        <skos:prefLabel>Co-Trending basis vectors</skos:prefLabel>
+        <skos:prefLabel>Co-trending basis vectors</skos:prefLabel>
     </skos:Concept>
     
 
@@ -563,7 +563,7 @@
 
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Surface_gravity_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Surface_gravity_catalogs"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs"/>
         <skos:prefLabel>Surface gravity catalogs</skos:prefLabel>
     </skos:Concept>
     
