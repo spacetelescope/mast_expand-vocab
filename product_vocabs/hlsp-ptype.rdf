@@ -14,9 +14,7 @@
         <owl:imports rdf:resource="http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf"/>
         <dc:created>2023-04-25</dc:created>
         <dc:creator>
-            <rdf:Description>
-                <foaf:name>MAST Staff</foaf:name>
-            </rdf:Description>
+            <rdf:Description/>
         </dc:creator>
         <dc:license rdf:resource="https://creativecommons.org/licenses/by-sa/3.0/legalcode"/>
         <dc:title xml:lang="en">MAST HLSP Data Product Type Vocabulary</dc:title>
@@ -90,87 +88,38 @@
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Abundance_Catalog -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Abundance_catalogs -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Abundance_Catalog">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Abundance_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_Catalog"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs"/>
         <skos:altLabel>Abundance Measurements</skos:altLabel>
         <skos:hiddenLabel>Abundances</skos:hiddenLabel>
-        <skos:prefLabel>Abundance Catalog</skos:prefLabel>
+        <skos:prefLabel>Abundance catalogs</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Association_Table -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Astrometric_catalogs -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Association_Table">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Astrometric_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Information"/>
-        <skos:prefLabel>Association Table</skos:prefLabel>
-    </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Astrometric_Catalog -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Astrometric_Catalog">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_Catalog"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs"/>
         <skos:altLabel>Parallax Catalog</skos:altLabel>
         <skos:hiddenLabel>Astrometry</skos:hiddenLabel>
         <skos:hiddenLabel>Parallaxes</skos:hiddenLabel>
-        <skos:prefLabel>Astrometric Catalog</skos:prefLabel>
+        <skos:prefLabel>Astrometric catalogs</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Auxiliary_Data -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Co-trending_basis_vectors -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Auxiliary_Data">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Co-trending_basis_vectors">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:prefLabel>Auxiliary Data</skos:prefLabel>
-    </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Background_Map -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Background_Map">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Auxiliary_Data"/>
-        <skos:prefLabel>Background Map</skos:prefLabel>
-    </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Bias_Frame -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Bias_Frame">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Calibration_Data"/>
-        <skos:prefLabel>Bias Frame</skos:prefLabel>
-    </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Calibration_Data -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Calibration_Data">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:altLabel>Engineering Data</skos:altLabel>
-        <skos:prefLabel>Calibration Data</skos:prefLabel>
-    </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Co-Trending_Basis_Vectors -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Co-Trending_Basis_Vectors">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Auxiliary_Data"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Light_Curve"/>
-        <skos:prefLabel>Co-Trending Basis Vectors</skos:prefLabel>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Light_curves"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Uncommon"/>
+        <skos:prefLabel>Co-Trending basis vectors</skos:prefLabel>
     </skos:Concept>
     
 
@@ -190,285 +139,252 @@
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Coronagraphic_Image -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Coronagraphic_images -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Coronagraphic_Image">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Coronagraphic_images">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Image"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Images"/>
         <skos:hiddenLabel>Coronagraph Image</skos:hiddenLabel>
-        <skos:prefLabel>Coronagraphic Image</skos:prefLabel>
+        <skos:prefLabel>Coronagraphic image</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Cylindrically_Projected_Image -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Cylindrically_projected_images -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Cylindrically_Projected_Image">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Cylindrically_projected_images">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Image"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Images"/>
         <skos:altLabel>Cylindrical Projection</skos:altLabel>
-        <skos:prefLabel>Cylindrically Projected Image</skos:prefLabel>
+        <skos:prefLabel>Cylindrically projected images</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Cylindrically_Projected_Mosaic -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Cylindrically_projected_mosaics -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Cylindrically_Projected_Mosaic">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Cylindrically_projected_mosaics">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Cylindrically_Projected_Image"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Image_Mosaic"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Cylindrically_projected_images"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Image_mosaics"/>
         <skos:altLabel>Cylindrical Projection</skos:altLabel>
-        <skos:prefLabel>Cylindrically Projected Mosaic</skos:prefLabel>
+        <skos:prefLabel>Cylindrically projected mosaics</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Dark_Frame -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Dithered_images -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Dark_Frame">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Dithered_images">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Calibration_Data"/>
-        <skos:hiddenLabel>Darks</skos:hiddenLabel>
-        <skos:prefLabel>Dark Frame</skos:prefLabel>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Images"/>
+        <skos:prefLabel>Dithered images</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Data_Validation_Report -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Doppler_images -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Data_Validation_Report">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Doppler_images">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Information"/>
-        <skos:prefLabel>Data Validation Report</skos:prefLabel>
-    </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Doppler_Image -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Doppler_Image">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Image"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Images"/>
         <skos:altLabel>Doppler Map</skos:altLabel>
-        <skos:prefLabel>Doppler Image</skos:prefLabel>
+        <skos:prefLabel>Doppler images</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Drizzled_Mosaic -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Drizzled_images -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Drizzled_Mosaic">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Drizzled_images">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Image_Mosaic"/>
-        <skos:altLabel>Drizzled Image</skos:altLabel>
-        <skos:prefLabel>Drizzled Mosaic</skos:prefLabel>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Images"/>
+        <skos:prefLabel>Drizzled images</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Ephemeris -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Ephemerides -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Ephemeris">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Ephemerides">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_Catalog"/>
-        <skos:hiddenLabel>Ephemerides</skos:hiddenLabel>
-        <skos:prefLabel>Ephemeris</skos:prefLabel>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs"/>
+        <skos:hiddenLabel>Ephemeris</skos:hiddenLabel>
+        <skos:prefLabel>Ephemerides</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Error_Map -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Event_lists -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Error_Map">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Auxiliary_Data"/>
-        <skos:altLabel>Uncertainties Map</skos:altLabel>
-        <skos:hiddenLabel>Errors</skos:hiddenLabel>
-        <skos:hiddenLabel>Uncertainties</skos:hiddenLabel>
-        <skos:prefLabel>Error Map</skos:prefLabel>
-    </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Events -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Events">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Event_lists">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:altLabel>Event File</skos:altLabel>
         <skos:altLabel>Photon Database</skos:altLabel>
-        <skos:prefLabel>Events</skos:prefLabel>
+        <skos:prefLabel>Event lists</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Exposure_Map -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Extinction_catalogs -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Exposure_Map">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Extinction_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Auxiliary_Data"/>
-        <skos:altLabel>Exposure Image</skos:altLabel>
-        <skos:altLabel>Exposure Time</skos:altLabel>
-        <skos:hiddenLabel>Expmap</skos:hiddenLabel>
-        <skos:prefLabel>Exposure Map</skos:prefLabel>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs"/>
+        <skos:prefLabel>Extinction catalogs</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Flat_Field -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Full_Frame_Images -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Flat_Field">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Full_Frame_Images">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Calibration_Data"/>
-        <skos:hiddenLabel>Flats</skos:hiddenLabel>
-        <skos:prefLabel>Flat Field</skos:prefLabel>
-    </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Full_Frame_Image -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Full_Frame_Image">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_Series_Image"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_series_image"/>
         <skos:hiddenLabel>FFI</skos:hiddenLabel>
         <skos:hiddenLabel>TESS Full Frame Image</skos:hiddenLabel>
-        <skos:prefLabel>Full Frame Image</skos:prefLabel>
+        <skos:prefLabel>Full Frame Images</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#HEALPixel_Map -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#HEALPixel_projections -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#HEALPixel_Map">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#HEALPixel_projections">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Image"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Images"/>
         <skos:altLabel>HEALPix Map</skos:altLabel>
-        <skos:prefLabel>HEALPixel Map</skos:prefLabel>
+        <skos:prefLabel>HEALPixel projections</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Image -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Image_mosaics -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Image">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Image_mosaics">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Images"/>
+        <skos:hiddenLabel>Mosaic Image</skos:hiddenLabel>
+        <skos:prefLabel>Image mosaics</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Image_stacks -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Image_stacks">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Images"/>
+        <skos:prefLabel>Image stacks</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Images -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Images">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:altLabel>Map</skos:altLabel>
         <skos:hiddenLabel>Imaging</skos:hiddenLabel>
-        <skos:prefLabel>Image</skos:prefLabel>
+        <skos:prefLabel>Images</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Image_Mosaic -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Interferometric_images -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Image_Mosaic">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Interferometric_images">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Image"/>
-        <skos:hiddenLabel>Mosaic Image</skos:hiddenLabel>
-        <skos:prefLabel>Image Mosaic</skos:prefLabel>
-    </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Image_Stack -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Image_Stack">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Image"/>
-        <skos:prefLabel>Image Stack</skos:prefLabel>
-    </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Information -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Information">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:altLabel>Human-Readable Information</skos:altLabel>
-        <skos:altLabel>Metadata</skos:altLabel>
-        <skos:altLabel>Supplement</skos:altLabel>
-        <skos:prefLabel>Information</skos:prefLabel>
-    </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Interferometric_Image -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Interferometric_Image">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Image"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Images"/>
         <skos:altLabel>Interferometry</skos:altLabel>
-        <skos:prefLabel>Interferometric Image</skos:prefLabel>
+        <skos:prefLabel>Interferometric images</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Light_Curve -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Light_curves -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Light_Curve">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Light_curves">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_Series"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_series"/>
         <skos:hiddenLabel>Light-curve</skos:hiddenLabel>
         <skos:hiddenLabel>Lightcurve</skos:hiddenLabel>
-        <skos:prefLabel>Light Curve</skos:prefLabel>
+        <skos:prefLabel>Light curves</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Mask -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Masks -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Mask">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Masks">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Region"/>
-        <skos:prefLabel>Mask</skos:prefLabel>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Uncommon"/>
+        <skos:prefLabel>Masks</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Measurements_Table -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Mass_catalogs -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Measurements_Table">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Mass_catalogs">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs"/>
+        <skos:altLabel>Stellar mass catalogs</skos:altLabel>
+        <skos:prefLabel>Mass catalogs</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Measurements_tables -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Measurements_tables">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:altLabel>Catalog</skos:altLabel>
         <skos:hiddenLabel>Catalogue</skos:hiddenLabel>
         <skos:hiddenLabel>Measurement Table</skos:hiddenLabel>
-        <skos:prefLabel>Measurements Table</skos:prefLabel>
+        <skos:prefLabel>Measurements tables</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Navigated_Image -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Metallicity_catalogs -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Navigated_Image">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Metallicity_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Image"/>
-        <skos:prefLabel>Navigated Image</skos:prefLabel>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs"/>
+        <skos:prefLabel>Metallicity catalogs</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Noise_Map -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Navigated_images -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Noise_Map">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Navigated_images">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Auxiliary_Data"/>
-        <skos:altLabel>Signal to Noise</skos:altLabel>
-        <skos:hiddenLabel>Noise</skos:hiddenLabel>
-        <skos:hiddenLabel>SNR</skos:hiddenLabel>
-        <skos:prefLabel>Noise Map</skos:prefLabel>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Images"/>
+        <skos:prefLabel>Navigated images</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Photometry_Catalog -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Photometry_catalogs -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Photometry_Catalog">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Photometry_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_Catalog"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs"/>
         <skos:altLabel>Magnitudes</skos:altLabel>
         <skos:hiddenLabel>Photometric Catalog</skos:hiddenLabel>
-        <skos:prefLabel>Photometry Catalog</skos:prefLabel>
+        <skos:prefLabel>Photometry catalogs</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Point_spread_functions -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Point_spread_functions">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Uncommon"/>
+        <skos:prefLabel>Point spread functions</skos:prefLabel>
     </skos:Concept>
     
 
@@ -483,87 +399,140 @@
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Power_Spectrum -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Power_spectra -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Power_Spectrum">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Power_spectra">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:hiddenLabel>Power Spectra</skos:hiddenLabel>
-        <skos:prefLabel>Power Spectrum</skos:prefLabel>
+        <skos:prefLabel>Power spectra</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Redshift_Catalog -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Redshift_catalogs -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Redshift_Catalog">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Redshift_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_Catalog"/>
-        <skos:prefLabel>Redshift Catalog</skos:prefLabel>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs"/>
+        <skos:prefLabel>Redshift catalogs</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Region -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Rotation_period_catalogs -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Region">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Rotation_period_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Auxiliary_Data"/>
-        <skos:altLabel>Footprint</skos:altLabel>
-        <skos:altLabel>Polygon</skos:altLabel>
-        <skos:prefLabel>Region</skos:prefLabel>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs"/>
+        <skos:prefLabel>Rotation period catalogs</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Source_Catalog -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Segmentation_maps -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Source_Catalog">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Segmentation_maps">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Measurements_Table"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Uncommon"/>
+        <skos:prefLabel>Segmentation maps</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Measurements_tables"/>
         <skos:hiddenLabel>Source Catalogue</skos:hiddenLabel>
-        <skos:prefLabel>Source Catalog</skos:prefLabel>
+        <skos:prefLabel>Source catalogs</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_Energy_Distribution -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Source_classification_catalogs -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_Energy_Distribution">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Source_classification_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:related rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Spectrum"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs"/>
+        <skos:altLabel>Spectral type catalogs</skos:altLabel>
+        <skos:prefLabel>Source classification catalogs</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Spectra -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectra">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:related rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_energy_distribution"/>
+        <skos:hiddenLabel>Spectroscopy</skos:hiddenLabel>
+        <skos:hiddenLabel>Spectrum</skos:hiddenLabel>
+        <skos:prefLabel>Spectra</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_energy_distribution -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_energy_distribution">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Spectra"/>
         <skos:altLabel>Composite Spectrum</skos:altLabel>
         <skos:altLabel>SED</skos:altLabel>
         <skos:hiddenLabel>Spectra</skos:hiddenLabel>
         <skos:hiddenLabel>Spectroscopy</skos:hiddenLabel>
         <skos:hiddenLabel>Spectrum</skos:hiddenLabel>
-        <skos:prefLabel>Spectral Energy Distribution</skos:prefLabel>
+        <skos:prefLabel>Spectral energy distributions</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_Line_List -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_images -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_Line_List">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_images">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Measurements_Table"/>
-        <skos:hiddenLabel>Linelist</skos:hiddenLabel>
-        <skos:prefLabel>Spectral Line List</skos:prefLabel>
-    </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_image -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_image">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Image"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Spectrum"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Images"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Spectra"/>
         <skos:altLabel>Cube</skos:altLabel>
         <skos:altLabel>Hyperspectral Image</skos:altLabel>
         <skos:altLabel>Imaging Spectroscopy</skos:altLabel>
         <skos:hiddenLabel>Hyperspectral Imaging</skos:hiddenLabel>
         <skos:hiddenLabel>Spectral Imaging</skos:hiddenLabel>
-        <skos:prefLabel>Spectral Image</skos:prefLabel>
+        <skos:prefLabel>Spectral images</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_line_images -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_line_images">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Images"/>
+        <skos:altLabel>Emission line images</skos:altLabel>
+        <skos:prefLabel>Spectral line images</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_line_lists -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_line_lists">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Measurements_tables"/>
+        <skos:hiddenLabel>Linelist</skos:hiddenLabel>
+        <skos:prefLabel>Spectral line lists</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_line_source_catalogs -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_line_source_catalogs">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs"/>
+        <skos:altLabel>Emission line source catalogs</skos:altLabel>
+        <skos:prefLabel>Spectral line source catalogs</skos:prefLabel>
     </skos:Concept>
     
 
@@ -573,131 +542,128 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectropolarimetry">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Polarimetry"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Spectrum"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Spectra"/>
         <skos:hiddenLabel>Polarimetry Spectrum</skos:hiddenLabel>
         <skos:prefLabel>Spectropolarimetry</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Spectrum -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Spectrum_stacks -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectrum">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectrum_stacks">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:related rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_Energy_Distribution"/>
-        <skos:hiddenLabel>Spectra</skos:hiddenLabel>
-        <skos:hiddenLabel>Spectroscopy</skos:hiddenLabel>
-        <skos:prefLabel>Spectrum</skos:prefLabel>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Spectra"/>
+        <skos:prefLabel>Spectrum stacks</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Spectrum_Stack -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Surface_gravity_catalogs -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectrum_Stack">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Surface_gravity_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Spectrum"/>
-        <skos:prefLabel>Spectrum Stack</skos:prefLabel>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Surface_gravity_catalogs"/>
+        <skos:prefLabel>Surface gravity catalogs</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Stacked_Image -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Target_Pixel_Files -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Stacked_Image">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Target_Pixel_Files">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Image"/>
-        <skos:prefLabel>Stacked Image</skos:prefLabel>
-    </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Target_Pixel_File -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Target_Pixel_File">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_Series_Image"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_series_image"/>
         <skos:hiddenLabel>TESS Target Pixel File</skos:hiddenLabel>
         <skos:hiddenLabel>TPF</skos:hiddenLabel>
-        <skos:prefLabel>Target Pixel File</skos:prefLabel>
+        <skos:prefLabel>Target Pixel Files</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Time_Series -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Temperature_catalogs -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Time_Series">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Temperature_catalogs">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs"/>
+        <skos:prefLabel>Temperature catalogs</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Time_series -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Time_series">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:altLabel>Time Domain</skos:altLabel>
         <skos:hiddenLabel>Time-series</skos:hiddenLabel>
         <skos:hiddenLabel>Timeseries</skos:hiddenLabel>
-        <skos:prefLabel>Time Series</skos:prefLabel>
+        <skos:prefLabel>Time series</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Time_Series_Image -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Time_series_image -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Time_Series_Image">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Time_series_image">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Image"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_Series"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Images"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_series"/>
         <skos:altLabel>Cube</skos:altLabel>
         <skos:altLabel>Dynamic Image</skos:altLabel>
         <skos:hiddenLabel>Time-Series Image</skos:hiddenLabel>
-        <skos:prefLabel>Time Series Image</skos:prefLabel>
+        <skos:prefLabel>Time series images</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Time_Series_Spectrum -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Time_series_spectra -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Time_Series_Spectrum">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Time_series_spectra">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Spectrum"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_Series"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Spectra"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_series"/>
         <skos:altLabel>Dynamic Spectrum</skos:altLabel>
-        <skos:hiddenLabel>Time Series Spectra</skos:hiddenLabel>
+        <skos:hiddenLabel>Time Series Spectrum</skos:hiddenLabel>
         <skos:hiddenLabel>Time-Series Spectra</skos:hiddenLabel>
         <skos:hiddenLabel>Time-Series Spectrum</skos:hiddenLabel>
-        <skos:prefLabel>Time Series Spectrum</skos:prefLabel>
+        <skos:prefLabel>Time series spectra</skos:prefLabel>
     </skos:Concept>
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Visibility_Data -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Turbulent_velocity_catalogs -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Visibility_Data">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Turbulent_velocity_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Interferometric_Image"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs"/>
+        <skos:prefLabel>Turbulent velocity catalogs</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Uncommon -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Uncommon">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel>Uncommon auxiliary types</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Visibility_data -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Visibility_data">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Interferometric_images"/>
         <skos:hiddenLabel>Interferometric Visibilities</skos:hiddenLabel>
         <skos:hiddenLabel>Interferometry</skos:hiddenLabel>
         <skos:hiddenLabel>Visibilities</skos:hiddenLabel>
-        <skos:prefLabel>Visibility Data</skos:prefLabel>
+        <skos:prefLabel>Visibility data</skos:prefLabel>
     </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Wavelength_Calibration -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Wavelength_Calibration">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Calibration_Data"/>
-        <skos:altLabel>Wavecal</skos:altLabel>
-        <skos:prefLabel>Wavelength Calibration</skos:prefLabel>
-    </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Weight_Map -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Weight_Map">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Auxiliary_Data"/>
-        <skos:hiddenLabel>Weightmap</skos:hiddenLabel>
-        <skos:hiddenLabel>Weights</skos:hiddenLabel>
-        <skos:prefLabel>Weight Map</skos:prefLabel>
-    </skos:Concept>
+    <rdf:Description>
+        <foaf:name>MAST Staff</foaf:name>
+    </rdf:Description>
     <rdf:Description>
         <foaf:name>MAST Staff</foaf:name>
     </rdf:Description>
