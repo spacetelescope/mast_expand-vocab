@@ -113,11 +113,21 @@
     
 
 
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Catalogs -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Catalogs">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:hiddenLabel>Measurement tables</skos:hiddenLabel>
+        <skos:prefLabel>Catalogs</skos:prefLabel>
+    </skos:Concept>
+    
+
+
     <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Co-trending_basis_vectors -->
 
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Co-trending_basis_vectors">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Light_curves"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_domain_data"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Uncommon"/>
         <skos:prefLabel>Co-trending basis vectors</skos:prefLabel>
     </skos:Concept>
@@ -129,6 +139,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Code">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:altLabel>Bash Script</skos:altLabel>
+        <skos:altLabel>Jupyter Notebook</skos:altLabel>
         <skos:altLabel>Python</skos:altLabel>
         <skos:altLabel>SQL</skos:altLabel>
         <skos:altLabel>Script</skos:altLabel>
@@ -145,7 +156,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Images"/>
         <skos:hiddenLabel>Coronagraph Image</skos:hiddenLabel>
-        <skos:prefLabel>Coronagraphic image</skos:prefLabel>
+        <skos:prefLabel>Coronagraphic images</skos:prefLabel>
     </skos:Concept>
     
 
@@ -157,18 +168,6 @@
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Images"/>
         <skos:altLabel>Cylindrical Projection</skos:altLabel>
         <skos:prefLabel>Cylindrically projected images</skos:prefLabel>
-    </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Cylindrically_projected_mosaics -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Cylindrically_projected_mosaics">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Cylindrically_projected_images"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Image_mosaics"/>
-        <skos:altLabel>Cylindrical Projection</skos:altLabel>
-        <skos:prefLabel>Cylindrically projected mosaics</skos:prefLabel>
     </skos:Concept>
     
 
@@ -209,19 +208,10 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Ephemerides">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_domain_data"/>
+        <skos:altLabel>Orbital period catalogs</skos:altLabel>
         <skos:hiddenLabel>Ephemeris</skos:hiddenLabel>
         <skos:prefLabel>Ephemerides</skos:prefLabel>
-    </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Event_lists -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Event_lists">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:altLabel>Event File</skos:altLabel>
-        <skos:altLabel>Photon Database</skos:altLabel>
-        <skos:prefLabel>Event lists</skos:prefLabel>
     </skos:Concept>
     
 
@@ -284,6 +274,7 @@
 
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Images">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:closeMatch rdf:resource="https://www.ivoa.net/rdf/product-type#spatially-resolved-dataset"/>
         <skos:altLabel>Map</skos:altLabel>
         <skos:hiddenLabel>Imaging</skos:hiddenLabel>
         <skos:prefLabel>Images</skos:prefLabel>
@@ -307,6 +298,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Light_curves">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_series"/>
+	<skos:exactMatch rdf:resource="https://www.ivoa.net/rdf/product-type#light-curve"/>
         <skos:hiddenLabel>Light-curve</skos:hiddenLabel>
         <skos:hiddenLabel>Lightcurve</skos:hiddenLabel>
         <skos:prefLabel>Light curves</skos:prefLabel>
@@ -331,18 +323,6 @@
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs"/>
         <skos:altLabel>Stellar mass catalogs</skos:altLabel>
         <skos:prefLabel>Mass catalogs</skos:prefLabel>
-    </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Measurements_tables -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Measurements_tables">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:altLabel>Catalog</skos:altLabel>
-        <skos:hiddenLabel>Catalogue</skos:hiddenLabel>
-        <skos:hiddenLabel>Measurement Table</skos:hiddenLabel>
-        <skos:prefLabel>Measurements tables</skos:prefLabel>
     </skos:Concept>
     
 
@@ -389,12 +369,14 @@
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Polarimetry -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Polarimetric_data -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Polarimetry">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Polarimetric_data">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+	<skos:exactMatch rdf:resource="https://www.ivoa.net/rdf/product-type#polarization-resolved-dataset"/>
+        <skos:altLabel>Polarimetry</skos:altLabel>
         <skos:hiddenLabel>Polarization</skos:hiddenLabel>
-        <skos:prefLabel>Polarimetry</skos:prefLabel>
+        <skos:prefLabel>Polarimetric data</skos:prefLabel>
     </skos:Concept>
     
 
@@ -403,7 +385,7 @@
 
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Power_spectra">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:hiddenLabel>Power Spectra</skos:hiddenLabel>
+        <skos:altLabel>Frequency resolved data</skos:altLabel>
         <skos:prefLabel>Power spectra</skos:prefLabel>
     </skos:Concept>
     
@@ -424,6 +406,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Rotation_period_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_domain_data"/>
         <skos:prefLabel>Rotation period catalogs</skos:prefLabel>
     </skos:Concept>
     
@@ -443,7 +426,7 @@
 
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Measurements_tables"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Catalogs"/>
         <skos:hiddenLabel>Source Catalogue</skos:hiddenLabel>
         <skos:prefLabel>Source catalogs</skos:prefLabel>
     </skos:Concept>
@@ -465,7 +448,8 @@
 
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectra">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:related rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_energy_distribution"/>
+	<skos:exactMatch rdf:resource="https://www.ivoa.net/rdf/product-type#spectrally-resolved-dataset"/>
+        <skos:altLabel>Spectrally resolved dataset</skos:altLabel>
         <skos:hiddenLabel>Spectroscopy</skos:hiddenLabel>
         <skos:hiddenLabel>Spectrum</skos:hiddenLabel>
         <skos:prefLabel>Spectra</skos:prefLabel>
@@ -473,11 +457,24 @@
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_energy_distribution -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Spectra_of_polarization -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_energy_distribution">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectra_of_polarization">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Polarimetry"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Spectra"/>
+        <skos:altLabel>Spectropolarimetry</skos:altLabel>
+        <skos:prefLabel>Spectra of polarization</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_energy_distributions -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_energy_distributions">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Spectra"/>
+	<skos:exactMatch rdf:resource="https://www.ivoa.net/rdf/product-type#sed"/>
         <skos:altLabel>Composite Spectrum</skos:altLabel>
         <skos:altLabel>SED</skos:altLabel>
         <skos:hiddenLabel>Spectra</skos:hiddenLabel>
@@ -494,6 +491,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Images"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Spectra"/>
+	<skos:closeMatch rdf:resource="https://www.ivoa.net/rdf/product-type#spectral-cube"/>
         <skos:altLabel>Cube</skos:altLabel>
         <skos:altLabel>Hyperspectral Image</skos:altLabel>
         <skos:altLabel>Imaging Spectroscopy</skos:altLabel>
@@ -515,11 +513,21 @@
     
 
 
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_line_light_curves -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_line_light_curves">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Light_curves"/>
+        <skos:prefLabel>Spectral line light curves</skos:prefLabel>
+    </skos:Concept>
+    
+
+
     <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_line_lists -->
 
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectral_line_lists">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Measurements_tables"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Catalogs"/>
         <skos:hiddenLabel>Linelist</skos:hiddenLabel>
         <skos:prefLabel>Spectral line lists</skos:prefLabel>
     </skos:Concept>
@@ -533,18 +541,6 @@
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Source_catalogs"/>
         <skos:altLabel>Emission line source catalogs</skos:altLabel>
         <skos:prefLabel>Spectral line source catalogs</skos:prefLabel>
-    </skos:Concept>
-    
-
-
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Spectropolarimetry -->
-
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Spectropolarimetry">
-        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Polarimetry"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Spectra"/>
-        <skos:hiddenLabel>Polarimetry Spectrum</skos:hiddenLabel>
-        <skos:prefLabel>Spectropolarimetry</skos:prefLabel>
     </skos:Concept>
     
 
@@ -591,10 +587,36 @@
     
 
 
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Time-tagged_event_lists -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Time-tagged_event_lists">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_domain_data"/>
+	<skos:closeMatch rdf:resource="https://www.ivoa.net/rdf/product-type#event-list"/>
+        <skos:altLabel>Event File</skos:altLabel>
+        <skos:altLabel>Photon Database</skos:altLabel>
+        <skos:prefLabel>Time-tagged event list</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Time_domain_data -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Time_domain_data">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:altLabel>Temporally resolved dataset</skos:altLabel>
+        <skos:prefLabel>Time domain data</skos:prefLabel>
+	<skos:closeMatch rdf:resource="https://www.ivoa.net/rdf/product-type#temporally-resolved-dataset"/>
+    </skos:Concept>
+    
+
+
     <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Time_series -->
 
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Time_series">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_domain_data"/>
+	<skos:narrowMatch rdf:resource="https://www.ivoa.net/rdf/product-type#timeseries"/>
         <skos:altLabel>Time Domain</skos:altLabel>
         <skos:hiddenLabel>Time-series</skos:hiddenLabel>
         <skos:hiddenLabel>Timeseries</skos:hiddenLabel>
@@ -603,12 +625,13 @@
     
 
 
-    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Time_series_image -->
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Time_series_images -->
 
-    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Time_series_image">
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Time_series_images">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Images"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_series"/>
+	<skos:closeMatch rdf:resource="https://www.ivoa.net/rdf/product-type#time-cube"/>
         <skos:altLabel>Cube</skos:altLabel>
         <skos:altLabel>Dynamic Image</skos:altLabel>
         <skos:hiddenLabel>Time-Series Image</skos:hiddenLabel>
@@ -623,6 +646,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Spectra"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_series"/>
+	<skos:exactMatch rdf:resource="https://www.ivoa.net/rdf/product-type#dynamic-spectrum"/>
         <skos:altLabel>Dynamic Spectrum</skos:altLabel>
         <skos:hiddenLabel>Time Series Spectrum</skos:hiddenLabel>
         <skos:hiddenLabel>Time-Series Spectra</skos:hiddenLabel>
@@ -646,7 +670,28 @@
 
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Uncommon">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:prefLabel>Uncommon auxiliary types</skos:prefLabel>
+        <skos:prefLabel>Auxiliary and calibration data</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Velocity-time_curves -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Velocity-time_curves">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Time_series"/>
+	<skos:exactMatch rdf:resource="https://www.ivoa.net/rdf/product-type#velocity-curve"/>
+        <skos:prefLabel>Velocity-time curves</skos:prefLabel>
+    </skos:Concept>
+    
+
+
+    <!-- https://archive.stsci.edu/rdf/hlsp-ptype#Velocity_maps -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Velocity_maps">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Images"/>
+        <skos:prefLabel>Velocity maps</skos:prefLabel>
     </skos:Concept>
     
 
@@ -655,11 +700,11 @@
 
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/hlsp-ptype#Visibility_data">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Interferometric_images"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/hlsp-ptype#Uncommon"/>
+	<skos:exactMatch rdf:resource="https://www.ivoa.net/rdf/product-type#visibility"/>
         <skos:hiddenLabel>Interferometric Visibilities</skos:hiddenLabel>
         <skos:hiddenLabel>Interferometry</skos:hiddenLabel>
-        <skos:hiddenLabel>Visibilities</skos:hiddenLabel>
-        <skos:prefLabel>Visibility data</skos:prefLabel>
+        <skos:prefLabel>Visibilities</skos:prefLabel>
     </skos:Concept>
     <rdf:Description>
         <foaf:name>MAST Staff</foaf:name>
