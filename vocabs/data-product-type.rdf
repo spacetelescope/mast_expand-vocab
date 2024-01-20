@@ -90,7 +90,7 @@
 
     <skos:ConceptScheme rdf:about="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-        <skos:prefLabel>HLSP Data Product Types</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">HLSP Data Product Types</skos:prefLabel>
     </skos:ConceptScheme>
 
     
@@ -102,7 +102,7 @@
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Source_catalogs"/>
         <skos:altLabel>Abundance Measurements</skos:altLabel>
         <skos:hiddenLabel>Abundances</skos:hiddenLabel>
-        <skos:prefLabel>Abundance catalogs</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Abundance catalogs</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -116,7 +116,7 @@
         <skos:altLabel>Parallax Catalog</skos:altLabel>
         <skos:hiddenLabel>Astrometry</skos:hiddenLabel>
         <skos:hiddenLabel>Parallaxes</skos:hiddenLabel>
-        <skos:prefLabel>Astrometric catalogs</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Astrometric catalogs</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -127,7 +127,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:hiddenLabel>Measurement tables</skos:hiddenLabel>
-        <skos:prefLabel>Catalogs</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Catalogs</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -139,7 +139,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Time_domain_data"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Uncommon"/>
-        <skos:prefLabel>Co-trending basis vectors</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Co-trending basis vectors</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -156,7 +156,7 @@
         <skos:altLabel>Scripts</skos:altLabel>
         <skos:altLabel>Shell Scripts</skos:altLabel>
         <skos:altLabel>Software</skos:altLabel>
-        <skos:prefLabel>Code</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Code</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -168,7 +168,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Images"/>
         <skos:hiddenLabel>Coronagraph Image</skos:hiddenLabel>
-        <skos:prefLabel>Coronagraphic images</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Coronagraphic images</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -180,7 +180,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Images"/>
         <skos:altLabel>Cylindrical Projection</skos:altLabel>
-        <skos:prefLabel>Cylindrically projected images</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Cylindrically projected images</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -191,7 +191,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Dithered_images">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Images"/>
-        <skos:prefLabel>Dithered images</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Dithered images</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -203,7 +203,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Images"/>
         <skos:altLabel>Doppler Map</skos:altLabel>
-        <skos:prefLabel>Doppler images</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Doppler images</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -214,7 +214,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Drizzled_images">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Images"/>
-        <skos:prefLabel>Drizzled images</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Drizzled images</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -228,7 +228,7 @@
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Time_domain_data"/>
         <skos:altLabel>Orbital period catalogs</skos:altLabel>
         <skos:hiddenLabel>Ephemeris</skos:hiddenLabel>
-        <skos:prefLabel>Ephemerides</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Ephemerides</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -239,7 +239,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Extinction_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Source_catalogs"/>
-        <skos:prefLabel>Extinction catalogs</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Extinction catalogs</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -252,7 +252,7 @@
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Time_series_images"/>
         <skos:hiddenLabel>FFI</skos:hiddenLabel>
         <skos:hiddenLabel>TESS Full Frame Image</skos:hiddenLabel>
-        <skos:prefLabel>Full Frame Images</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Full Frame Images</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -264,7 +264,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Images"/>
         <skos:altLabel>HEALPix Map</skos:altLabel>
-        <skos:prefLabel>HEALPixel projections</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">HEALPixel projections</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -276,7 +276,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Images"/>
         <skos:hiddenLabel>Mosaic Image</skos:hiddenLabel>
-        <skos:prefLabel>Image mosaics</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Image mosaics</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -287,7 +287,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Image_stacks">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Images"/>
-        <skos:prefLabel>Image stacks</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Image stacks</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -300,7 +300,7 @@
 	<skos:closeMatch rdf:resource="https://www.ivoa.net/rdf/product-type#spatially-resolved-dataset"/>
         <skos:altLabel>Map</skos:altLabel>
         <skos:hiddenLabel>Imaging</skos:hiddenLabel>
-        <skos:prefLabel>Images</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Images</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -312,7 +312,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Images"/>
         <skos:altLabel>Interferometry</skos:altLabel>
-        <skos:prefLabel>Interferometric images</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Interferometric images</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -326,7 +326,7 @@
 	<skos:exactMatch rdf:resource="https://www.ivoa.net/rdf/product-type#light-curve"/>
         <skos:hiddenLabel>Light-curve</skos:hiddenLabel>
         <skos:hiddenLabel>Lightcurve</skos:hiddenLabel>
-        <skos:prefLabel>Light curves</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Light curves</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -337,7 +337,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Masks">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Uncommon"/>
-        <skos:prefLabel>Masks</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Masks</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -349,7 +349,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Source_catalogs"/>
         <skos:altLabel>Stellar mass catalogs</skos:altLabel>
-        <skos:prefLabel>Mass catalogs</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Mass catalogs</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -360,7 +360,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Metallicity_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Source_catalogs"/>
-        <skos:prefLabel>Metallicity catalogs</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Metallicity catalogs</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -371,7 +371,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Navigated_images">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Images"/>
-        <skos:prefLabel>Navigated images</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Navigated images</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -384,7 +384,7 @@
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Source_catalogs"/>
         <skos:altLabel>Magnitudes</skos:altLabel>
         <skos:hiddenLabel>Photometric Catalog</skos:hiddenLabel>
-        <skos:prefLabel>Photometry catalogs</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Photometry catalogs</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -395,7 +395,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Point_spread_functions">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Uncommon"/>
-        <skos:prefLabel>Point spread functions</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Point spread functions</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -408,7 +408,7 @@
 	<skos:exactMatch rdf:resource="https://www.ivoa.net/rdf/product-type#polarization-resolved-dataset"/>
         <skos:altLabel>Polarimetry</skos:altLabel>
         <skos:hiddenLabel>Polarization</skos:hiddenLabel>
-        <skos:prefLabel>Polarimetric data</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Polarimetric data</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -419,7 +419,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Power_spectra">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:altLabel>Frequency resolved data</skos:altLabel>
-        <skos:prefLabel>Power spectra</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Power spectra</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -430,7 +430,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Redshift_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Source_catalogs"/>
-        <skos:prefLabel>Redshift catalogs</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Redshift catalogs</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -442,7 +442,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Source_catalogs"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Time_domain_data"/>
-        <skos:prefLabel>Rotation period catalogs</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Rotation period catalogs</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -453,7 +453,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Segmentation_maps">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Uncommon"/>
-        <skos:prefLabel>Segmentation maps</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Segmentation maps</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -465,7 +465,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Catalogs"/>
         <skos:hiddenLabel>Source Catalogue</skos:hiddenLabel>
-        <skos:prefLabel>Source catalogs</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Source catalogs</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -477,7 +477,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Source_catalogs"/>
         <skos:altLabel>Spectral type catalogs</skos:altLabel>
-        <skos:prefLabel>Source classification catalogs</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Source classification catalogs</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -491,7 +491,7 @@
         <skos:altLabel>Spectrally resolved dataset</skos:altLabel>
         <skos:hiddenLabel>Spectroscopy</skos:hiddenLabel>
         <skos:hiddenLabel>Spectrum</skos:hiddenLabel>
-        <skos:prefLabel>Spectra</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Spectra</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -504,7 +504,7 @@
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Polarimetric_data"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Spectra"/>
         <skos:altLabel>Spectropolarimetry</skos:altLabel>
-        <skos:prefLabel>Spectra of polarization</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Spectra of polarization</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -521,7 +521,7 @@
         <skos:hiddenLabel>Spectra</skos:hiddenLabel>
         <skos:hiddenLabel>Spectroscopy</skos:hiddenLabel>
         <skos:hiddenLabel>Spectrum</skos:hiddenLabel>
-        <skos:prefLabel>Spectral energy distributions</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Spectral energy distributions</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -539,7 +539,7 @@
         <skos:altLabel>Imaging Spectroscopy</skos:altLabel>
         <skos:hiddenLabel>Hyperspectral Imaging</skos:hiddenLabel>
         <skos:hiddenLabel>Spectral Imaging</skos:hiddenLabel>
-        <skos:prefLabel>Spectral images</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Spectral images</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -551,7 +551,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Images"/>
         <skos:altLabel>Emission line images</skos:altLabel>
-        <skos:prefLabel>Spectral line images</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Spectral line images</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -562,7 +562,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Spectral_line_light_curves">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Light_curves"/>
-        <skos:prefLabel>Spectral line light curves</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Spectral line light curves</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -574,7 +574,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Catalogs"/>
         <skos:hiddenLabel>Linelist</skos:hiddenLabel>
-        <skos:prefLabel>Spectral line lists</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Spectral line lists</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -586,7 +586,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Source_catalogs"/>
         <skos:altLabel>Emission line source catalogs</skos:altLabel>
-        <skos:prefLabel>Spectral line source catalogs</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Spectral line source catalogs</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -597,7 +597,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Spectrum_stacks">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Spectra"/>
-        <skos:prefLabel>Spectrum stacks</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Spectrum stacks</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -608,7 +608,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Surface_gravity_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Source_catalogs"/>
-        <skos:prefLabel>Surface gravity catalogs</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Surface gravity catalogs</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -621,7 +621,7 @@
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Time_series_images"/>
         <skos:hiddenLabel>TESS Target Pixel File</skos:hiddenLabel>
         <skos:hiddenLabel>TPF</skos:hiddenLabel>
-        <skos:prefLabel>Target Pixel Files</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Target Pixel Files</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -632,7 +632,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Temperature_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Source_catalogs"/>
-        <skos:prefLabel>Temperature catalogs</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Temperature catalogs</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -646,7 +646,7 @@
 	<skos:closeMatch rdf:resource="https://www.ivoa.net/rdf/product-type#event-list"/>
         <skos:altLabel>Event File</skos:altLabel>
         <skos:altLabel>Photon Database</skos:altLabel>
-        <skos:prefLabel>Time-tagged event list</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Time-tagged event list</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -657,7 +657,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Time_domain_data">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:altLabel>Temporally resolved dataset</skos:altLabel>
-        <skos:prefLabel>Time domain data</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Time domain data</skos:prefLabel>
 	<skos:closeMatch rdf:resource="https://www.ivoa.net/rdf/product-type#temporally-resolved-dataset"/>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
@@ -673,7 +673,7 @@
         <skos:altLabel>Time Domain</skos:altLabel>
         <skos:hiddenLabel>Time-series</skos:hiddenLabel>
         <skos:hiddenLabel>Timeseries</skos:hiddenLabel>
-        <skos:prefLabel>Time series</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Time series</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -689,7 +689,7 @@
         <skos:altLabel>Cube</skos:altLabel>
         <skos:altLabel>Dynamic Image</skos:altLabel>
         <skos:hiddenLabel>Time-Series Image</skos:hiddenLabel>
-        <skos:prefLabel>Time series images</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Time series images</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -706,7 +706,7 @@
         <skos:hiddenLabel>Time Series Spectrum</skos:hiddenLabel>
         <skos:hiddenLabel>Time-Series Spectra</skos:hiddenLabel>
         <skos:hiddenLabel>Time-Series Spectrum</skos:hiddenLabel>
-        <skos:prefLabel>Time series spectra</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Time series spectra</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -717,7 +717,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Turbulent_velocity_catalogs">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Source_catalogs"/>
-        <skos:prefLabel>Turbulent velocity catalogs</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Turbulent velocity catalogs</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -727,7 +727,7 @@
 
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Uncommon">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-        <skos:prefLabel>Auxiliary and calibration data</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Auxiliary and calibration data</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -739,7 +739,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Time_series"/>
 	<skos:exactMatch rdf:resource="https://www.ivoa.net/rdf/product-type#velocity-curve"/>
-        <skos:prefLabel>Velocity-time curves</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Velocity-time curves</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -750,7 +750,7 @@
     <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Velocity_maps">
         <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Images"/>
-        <skos:prefLabel>Velocity maps</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Velocity maps</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     
@@ -764,7 +764,7 @@
 	<skos:exactMatch rdf:resource="https://www.ivoa.net/rdf/product-type#visibility"/>
         <skos:hiddenLabel>Interferometric Visibilities</skos:hiddenLabel>
         <skos:hiddenLabel>Interferometry</skos:hiddenLabel>
-        <skos:prefLabel>Visibilities</skos:prefLabel>
+        <skos:prefLabel xml:lang="en">Visibilities</skos:prefLabel>
 	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
     </skos:Concept>
     <rdf:Description>

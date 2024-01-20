@@ -34,7 +34,7 @@ for s, p, o in g.triples((None, skos.prefLabel, None)):
                 OPTIONAL {{
                   ?descendant ^skos:broader+ ?nestedDescendant .
                 }}
-                FILTER (?prefLabel = "{tag}") .
+                FILTER (?prefLabel = "{tag}"@en) .
             }}
             GROUP BY ?descendant
             ORDER BY DESC(?descendantCount)
