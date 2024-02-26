@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://archive.stsci.edu/rdf/basis#"
+     xml:base="https://archive.stsci.edu/rdf/basis"
+     xmlns:dc="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:ivoasem="http://www.ivoa.net/rdf/ivoasem#">
+    <owl:Ontology rdf:about="https://archive.stsci.edu/rdf/basis">
+        <owl:imports rdf:resource="http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf"/>
+        <dc:created>2024-02-26</dc:created>
+        <dc:creator>
+            <rdf:Description/>
+        </dc:creator>
+        <dc:license rdf:resource="https://creativecommons.org/licenses/by-sa/3.0/legalcode"/>
+        <dc:title xml:lang="en">MAST HLSP Basis Vocabulary</dc:title>
+        <ivoasem:vocflavour>SKOS</ivoasem:vocflavour>
+        <rdfs:label xml:lang="en">MAST HLSP Basis Vocabulary</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/created -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://www.ivoa.net/rdf/ivoasem#vocflavour -->
+
+    <owl:AnnotationProperty rdf:about="http://www.ivoa.net/rdf/ivoasem#vocflavour"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+    <!-- https://archive.stsci.edu/rdf/basis/#Basis_HLSP -->
+
+    <skos:ConceptScheme rdf:about="https://archive.stsci.edu/rdf/basis#Basis_HLSP">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+        <skos:prefLabel xml:lang="en">HLSP Basis</skos:prefLabel>
+    </skos:ConceptScheme>
+
+    
+
+    <!-- https://archive.stsci.edu/rdf/basis#Observations -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/basis#Observations">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Observations</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/basis#Basis_HLSP"/>
+    </skos:Concept>
+    
+    <!-- https://archive.stsci.edu/rdf/basis#Derived_properties -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/basis#Derived_properties">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Derived properties</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/basis#Basis_HLSP"/>
+    </skos:Concept>
+    
+    <!-- https://archive.stsci.edu/rdf/basis#Models -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/basis#Models">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:prefLabel xml:lang="en">Models</skos:prefLabel>
+	<skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/basis#Basis_HLSP"/>
+    </skos:Concept>
+    
+    <rdf:Description>
+        <foaf:name>MAST Staff</foaf:name>
+    </rdf:Description>
+</rdf:RDF>
