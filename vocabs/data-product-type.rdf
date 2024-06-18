@@ -17,9 +17,9 @@
             <rdf:Description/>
         </dc:creator>
         <dc:license rdf:resource="https://creativecommons.org/licenses/by-sa/3.0/legalcode"/>
-        <dc:title xml:lang="en">MAST HLSP Data Product Type Vocabulary</dc:title>
+        <dc:title xml:lang="en">MAST Expanded Data Product Type Vocabulary</dc:title>
         <ivoasem:vocflavour>SKOS</ivoasem:vocflavour>
-        <rdfs:label xml:lang="en">MAST HLSP Data Product Type Vocabulary</rdfs:label>
+        <rdfs:label xml:lang="en">DataProductType</rdfs:label>
     </owl:Ontology>
     
 
