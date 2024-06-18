@@ -110,7 +110,7 @@ def main():
         print('You selected:', user_input)
         if len(descendants[user_input])>0:
             # Suggest descendants
-            print('You may want to consider these more specific tags:')
+            print('which has these descendants:')
             for i in descendants[user_input]:
                 print(f'  - {i}')
 
