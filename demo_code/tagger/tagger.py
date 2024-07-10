@@ -159,7 +159,7 @@ def append_mapping_file(output_path, output_columns, suffix_extension, assigned_
 def find_suffix_extensions(directory) -> list:
     unique_suffix_extensions = set()
 
-    pattern = re.compile(r'_(.*)(\.[\w.]+)$')
+    pattern = re.compile(r'_([^_]*)(\.[\w.]+)$')
 
     for _, _, files in os.walk(directory):
         for file in files:
