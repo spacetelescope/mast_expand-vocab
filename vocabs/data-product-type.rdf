@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://archive.stsci.edu/rdf/data-product-type#"
      xml:base="https://archive.stsci.edu/rdf/data-product-type"
-     xmlns:dc="http://purl.org/dc/terms/"
+     xmlns:dcterms="http://purl.org/dc/terms/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -12,12 +12,12 @@
      xmlns:ivoasem="http://www.ivoa.net/rdf/ivoasem#">
     <owl:Ontology rdf:about="https://archive.stsci.edu/rdf/data-product-type">
         <owl:imports rdf:resource="http://www.w3.org/TR/skos-reference/skos-owl1-dl.rdf"/>
-        <dc:created>2024-01-19</dc:created>
-        <dc:creator>
+        <dcterms:created>2024-01-19</dcterms:created>
+        <dcterms:creator>
             <rdf:Description/>
-        </dc:creator>
-        <dc:license rdf:resource="https://creativecommons.org/licenses/by-sa/3.0/legalcode"/>
-        <dc:title xml:lang="en">MAST Expanded Data Product Type Vocabulary</dc:title>
+        </dcterms:creator>
+        <dcterms:license rdf:resource="https://creativecommons.org/licenses/by-sa/3.0/legalcode"/>
+        <dcterms:title xml:lang="en">MAST Expanded Data Product Type Vocabulary</dcterms:title>
         <ivoasem:vocflavour>SKOS</ivoasem:vocflavour>
         <rdfs:label xml:lang="en">DataProductType</rdfs:label>
     </owl:Ontology>
@@ -846,7 +846,32 @@
         <skos:hiddenLabel xml:lang="en">Interferometry</skos:hiddenLabel>
         <skos:prefLabel xml:lang="en">Visibilities</skos:prefLabel>
     </skos:Concept>
-    
+
+    <!-- https://archive.stsci.edu/rdf/data-product-type#Example_concept -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Example_concept">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Uncommon"/>
+        <skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
+        <skos:prefLabel xml:lang="en">DEV TEST CONCEPT</skos:prefLabel>
+        <skos:altLabel xml:lang="en">DEV TEST CONCEPT.</skos:altLabel>
+	<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+	<ivoasem:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ivoasem:deprecated>
+	<dcterms:replaces rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Example_concept_2"/>
+    </skos:Concept>
+
+    <!-- https://archive.stsci.edu/rdf/data-product-type#Example_concept_2 -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#Example_concept_2">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
+        <skos:prefLabel xml:lang="en">DEV TEST CONCEPT 2</skos:prefLabel>
+        <skos:hiddenLabel xml:lang="en">DEV TEST CONCEPT 2.</skos:hiddenLabel>
+	<owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+	<ivoasem:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</ivoasem:deprecated>
+	<dcterms:isReplacedBy rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Example_concept"/>
+	<ivoasem:useInstead rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Example_concept"/>
+    </skos:Concept>
 
     <rdf:Description>
         <foaf:name>MAST Staff</foaf:name>
