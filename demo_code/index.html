@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MAST Data Product Tagger</title>
+    <style>
+        .suggestions-list {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            z-index: 1000;
+            background-color: #fff;
+            border: 1px solid #ddd;
+        }
+        .suggestions-list li {
+            padding: 4px;
+            cursor: pointer;
+        }
+        .suggestions-list li:hover {
+            background-color: #eee;
+        }
+        .autocomplete-container {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <font size="4">
+        <h1>MAST Data Product Tagger</h1>
+        Please enter each suffix.extension pair that your data collection contains, then start tagging!
+        <br>
+        <br>
+        For example, if your file looks like "*_spec.fits", then suffix="spec", extension="fits", and you might tag this product as "Spectra".
+        <br>
+        <br>
+        You can tag each product type with as many tags as you like!
+        <br>
+        <br>
+    </font>
+    <button id="add-row-button">Add Row</button>
+    <table id="data-table" border="1">
+        <thead>
+            <tr>
+                <th>Suffix</th>
+                <th>Extension</th>
+                <th>Data Product Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" placeholder="spec"></td>
+                <td><input type="text" placeholder="fits"></td>
+                <td class="autocomplete-container">
+                    <input type="text" class="autocomplete-input" placeholder="Spectra">
+                    <ul class="suggestions-list"></ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button id="export-button">Export CSV</button>
+    
+    <script>
+        async function fetchSuggestions(query) {
+            if (!query) return [];
+            const response = await fetch(`http://127.0.0.1:5000/autocomplete?q=${query}`);
+            return response.ok ? await response.json() : [];
+        }
+
+        function setupTypeahead(input, suggestionsList) {
+            input.addEventListener('input', async () => {
+                const query = input.value.split(',').pop().trim();  // Get the latest query segment
+                const allSuggestions = await fetchSuggestions(query);
+
+                // Get the current list of selected suggestions
+                const selectedSuggestions = input.value.split(',').map(item => item.trim()).filter(Boolean);
+
+                // Filter out already selected suggestions
+                const filteredSuggestions = allSuggestions.filter(suggestion => !selectedSuggestions.includes(suggestion));
+
+                // Clear previous suggestions
+                suggestionsList.innerHTML = '';
+
+                // Add new suggestions
+                filteredSuggestions.forEach(suggestion => {
+                    const item = document.createElement('li');
+                    item.textContent = suggestion;
+                    item.addEventListener('click', () => {
+                        const currentValue = input.value.trim();
+                        const lastCommaIndex = currentValue.lastIndexOf(',');
+                        const newValue = lastCommaIndex === -1 ? suggestion : `${currentValue.slice(0, lastCommaIndex + 1)} ${suggestion}`;
+                        input.value = newValue + ', ';  // Append the suggestion followed by a comma and space
+                        suggestionsList.style.display = 'none';
+                        input.focus();  // Refocus the input field
+                        input.dispatchEvent(new Event('input'));  // Trigger input event to refresh suggestions
+                    });
+                    suggestionsList.appendChild(item);
+                });
+
+                // Display suggestions
+                suggestionsList.style.display = filteredSuggestions.length ? 'block' : 'none';
+            });
+
+            // Hide suggestions when clicking outside the box
+            document.addEventListener('click', (e) => {
+                if (!input.contains(e.target) && !suggestionsList.contains(e.target)) {
+                    suggestionsList.style.display = 'none';
+                }
+            });
+        }
+
+        function addRow() {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td><input type="text" placeholder="spec"></td>
+                <td><input type="text" placeholder="fits"></td>
+                <td class="autocomplete-container">
+                    <input type="text" class="autocomplete-input" placeholder="Spectra">
+                    <ul class="suggestions-list"></ul>
+                </td>`;
+            document.getElementById('data-table').querySelector('tbody').appendChild(row);
+            const input = row.querySelector('.autocomplete-input');
+            const suggestionsList = row.querySelector('.suggestions-list');
+            setupTypeahead(input, suggestionsList);
+        }
+
+        function exportToCSV() {
+            const rows = [];
+            const table = document.getElementById('data-table');
+            const trs = table.querySelectorAll('tbody tr');
+
+            trs.forEach(tr => {
+                const tds = tr.querySelectorAll('td');
+                const suffix = tds[0].querySelector('input').value;
+                const extension = tds[1].querySelector('input').value;
+                const dataProductTypes = tds[2].querySelector('input').value.split(',').map(type => type.trim()).filter(Boolean);
+
+                dataProductTypes.forEach(type => {
+                    rows.push([suffix, extension, type]);
+                });
+            });
+
+            // Convert array to CSV format
+            let csvContent = "data:text/csv;charset=utf-8," 
+                + rows.map(row => row.join(',')).join('\n');
+            
+            // Create a downloadable link and trigger download
+            const encodedUri = encodeURI(csvContent);
+            const link = document.createElement('a');
+            link.setAttribute('href', encodedUri);
+            link.setAttribute('download', 'data.csv');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        document.getElementById('add-row-button').addEventListener('click', addRow);
+        document.getElementById('export-button').addEventListener('click', exportToCSV);
+
+        // Initialize typeahead for existing inputs
+        document.querySelectorAll('.autocomplete-input').forEach(input => {
+            setupTypeahead(input, input.nextElementSibling);
+        });
+    </script>
+</body>
+</html>
