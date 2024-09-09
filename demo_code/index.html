@@ -88,7 +88,7 @@
                 const allSuggestions = await fetchSuggestions(query);  // Pass the new query to fetchSuggestions to retrieve all suggestions
 
                 // Get the list of already-selected suggestions
-                const selectedSuggestions = input.value.split(',').map(item => item.trim()).filter(Boolean);
+                const selectedSuggestions = input.value.split(',').map(item => item.trim()).filter(Boolean).slice(0, -1);
 
                 // Filter out the already-selected suggestions
                 const filteredSuggestions = allSuggestions.filter(suggestion => !selectedSuggestions.includes(suggestion));
