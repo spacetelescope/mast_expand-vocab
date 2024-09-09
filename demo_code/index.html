@@ -62,47 +62,51 @@
     <button id="export-button">Export CSV</button>
     
     <script>
+        // Function to get and jsonify suggestions from the API, to be called from the input event listener in setupTypeahead
         async function fetchSuggestions(query) {
             if (!query) return [];
             const response = await fetch(`http://127.0.0.1:5000/autocomplete?q=${query}`);
             return response.ok ? await response.json() : [];
         }
 
+        // Function that sets up listeners for typeahead fields.
+        // input is the element with the entered text, suggestionsList is the element where the suggestions will be displayed.
         function setupTypeahead(input, suggestionsList) {
             input.addEventListener('input', async () => {
-                const query = input.value.split(',').pop().trim();  // Get the latest query segment
-                const allSuggestions = await fetchSuggestions(query);
+                const query = input.value.split(',').pop().trim();  // Get the new query (text after the last comma) from input
+                const allSuggestions = await fetchSuggestions(query);  // Pass the new query to fetchSuggestions to retrieve all suggestions
 
-                // Get the current list of selected suggestions
+                // Get the list of already-selected suggestions
                 const selectedSuggestions = input.value.split(',').map(item => item.trim()).filter(Boolean);
 
-                // Filter out already selected suggestions
+                // Filter out the already-selected suggestions
                 const filteredSuggestions = allSuggestions.filter(suggestion => !selectedSuggestions.includes(suggestion));
 
-                // Clear previous suggestions
+                // Clear previously displayed suggestions
                 suggestionsList.innerHTML = '';
 
                 // Add new suggestions
-                filteredSuggestions.forEach(suggestion => {
-                    const item = document.createElement('li');
-                    item.textContent = suggestion;
-                    item.addEventListener('click', () => {
-                        const currentValue = input.value.trim();
-                        const lastCommaIndex = currentValue.lastIndexOf(',');
-                        const newValue = lastCommaIndex === -1 ? suggestion : `${currentValue.slice(0, lastCommaIndex + 1)} ${suggestion}`;
-                        input.value = newValue + ', ';  // Append the suggestion followed by a comma and space
-                        suggestionsList.style.display = 'none';
+                filteredSuggestions.forEach(suggestion => {  // For each suggestion in filteredSuggestions
+                    const item = document.createElement('li');  // Create empty list element
+                    item.textContent = suggestion;  // Set the list element equal to the value of the suggestion
+                    item.addEventListener('click', () => {  // Add an event listener for clicks to the list element
+                        // If click is detected...
+                        const currentValue = input.value.trim();  // Retrieve all text currently in the input field
+                        const lastCommaIndex = currentValue.lastIndexOf(',');  // Get position of the last comma in input
+                        const cleanValue = lastCommaIndex == -1 ? '' : currentValue.slice(0, lastCommaIndex + 1); // cleanValue is the input with everything after the last comma removed
+                        input.value = cleanValue + suggestion + ', ';  // Append the suggestion to cleanValue
+                        suggestionsList.style.display = 'none';  // Hide the suggestions list
                         input.focus();  // Refocus the input field
                         input.dispatchEvent(new Event('input'));  // Trigger input event to refresh suggestions
                     });
-                    suggestionsList.appendChild(item);
+                    suggestionsList.appendChild(item);  // Add this list element to the displayed suggestions list
                 });
 
-                // Display suggestions
+                // Display suggestions if there are any suggestions (otherwise, hide suggestions)
                 suggestionsList.style.display = filteredSuggestions.length ? 'block' : 'none';
             });
 
-            // Hide suggestions when clicking outside the box
+            // Hide suggestions when clicking outside the box+list
             document.addEventListener('click', (e) => {
                 if (!input.contains(e.target) && !suggestionsList.contains(e.target)) {
                     suggestionsList.style.display = 'none';
@@ -110,6 +114,7 @@
             });
         }
 
+        // Function to add a new row to the table of inputs
         function addRow() {
             const row = document.createElement('tr');
             row.innerHTML = `
@@ -120,24 +125,25 @@
                     <ul class="suggestions-list"></ul>
                 </td>`;
             document.getElementById('data-table').querySelector('tbody').appendChild(row);
-            const input = row.querySelector('.autocomplete-input');
-            const suggestionsList = row.querySelector('.suggestions-list');
-            setupTypeahead(input, suggestionsList);
+            const input = row.querySelector('.autocomplete-input');  // Input that will be passed into setupTypeahead
+            const suggestionsList = row.querySelector('.suggestions-list');  // Element where suggestions will be displayed, to be passed into setupTypeahead
+            setupTypeahead(input, suggestionsList);  // Set up typeahead for the autocomplete input in this row
         }
 
         function exportToCSV() {
-            const rows = [];
+            const rows = [];  // Initialize empty rows array
             const table = document.getElementById('data-table');
-            const trs = table.querySelectorAll('tbody tr');
+            const trs = table.querySelectorAll('tbody tr');  // Select all table rows from table body
 
-            trs.forEach(tr => {
-                const tds = tr.querySelectorAll('td');
-                const suffix = tds[0].querySelector('input').value;
-                const extension = tds[1].querySelector('input').value;
-                const dataProductTypes = tds[2].querySelector('input').value.split(',').map(type => type.trim()).filter(Boolean);
+            trs.forEach(tr => {  // For each table row
+                const tds = tr.querySelectorAll('td');  // Return all table cells in the row
+                const suffix = tds[0].querySelector('input').value;  // Value of input in first cell is suffix
+                const extension = tds[1].querySelector('input').value;  // Value of input in second cell is extension
+                // Parse the value of input in third cell: split on commas into an array, remove empty strings
+                const dataProductTypes = tds[2].querySelector('input').value.split(',').map(type => type.trim()).filter(Boolean); 
 
-                dataProductTypes.forEach(type => {
-                    rows.push([suffix, extension, type]);
+                dataProductTypes.forEach(type => {  // For each parsed element in the dataProductTypes array
+                    rows.push([suffix, extension, type]);  // Add this mapping to the rows array
                 });
             });
 
@@ -149,7 +155,7 @@
             const encodedUri = encodeURI(csvContent);
             const link = document.createElement('a');
             link.setAttribute('href', encodedUri);
-            link.setAttribute('download', 'data.csv');
+            link.setAttribute('download', 'test.csv');
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -158,10 +164,11 @@
         document.getElementById('add-row-button').addEventListener('click', addRow);
         document.getElementById('export-button').addEventListener('click', exportToCSV);
 
-        // Initialize typeahead for existing inputs
-        document.querySelectorAll('.autocomplete-input').forEach(input => {
-            setupTypeahead(input, input.nextElementSibling);
-        });
+        // Set up typeahead for the first row
+        const input_firstrow = document.querySelector('.autocomplete-input');  // Input that will be passed into setupTypeahead
+        const suggestionsList_firstrow = document.querySelector('.suggestions-list');  // Element where suggestions will be displayed, to be passed into setupTypeahead
+        setupTypeahead(input_firstrow, suggestionsList_firstrow);  // Set up typeahead for the autocomplete input in this row
+
     </script>
 </body>
 </html>
