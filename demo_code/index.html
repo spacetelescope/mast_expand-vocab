@@ -23,6 +23,9 @@
         .autocomplete-container {
             position: relative;
         }
+        .descendants-text{
+            margin-top: 10px
+        }
     </style>
 </head>
 
@@ -59,6 +62,7 @@
             </tr>
         </tbody>
     </table>
+    <div id="descendants-text" class="descendants-text"></div>
     <button id="export-button">Export CSV</button>
     
     <script>
@@ -66,6 +70,13 @@
         async function fetchSuggestions(query) {
             if (!query) return [];
             const response = await fetch(`http://127.0.0.1:5000/autocomplete?q=${query}`);
+            return response.ok ? await response.json() : [];
+        }
+
+        // Function to get and jsonify descendants from the API
+        async function fetchDescendants(query) {
+            if (!query) return [];
+            const response = await fetch(`http://127.0.0.1:5000/descendants?q=${query}`);
             return response.ok ? await response.json() : [];
         }
 
@@ -89,7 +100,7 @@
                 filteredSuggestions.forEach(suggestion => {  // For each suggestion in filteredSuggestions
                     const item = document.createElement('li');  // Create empty list element
                     item.textContent = suggestion;  // Set the list element equal to the value of the suggestion
-                    item.addEventListener('click', () => {  // Add an event listener for clicks to the list element
+                    item.addEventListener('click', async () => {  // Add an event listener for clicks to the list element
                         // If click is detected...
                         const currentValue = input.value.trim();  // Retrieve all text currently in the input field
                         const lastCommaIndex = currentValue.lastIndexOf(',');  // Get position of the last comma in input
@@ -98,6 +109,14 @@
                         suggestionsList.style.display = 'none';  // Hide the suggestions list
                         input.focus();  // Refocus the input field
                         input.dispatchEvent(new Event('input'));  // Trigger input event to refresh suggestions
+
+                        // Get descendants of the clicked suggestion
+                        const descendants = await fetchDescendants(suggestion);
+                        const descendantsText = document.getElementById('descendants-text');
+                        if (descendants.length !== 0) {  // If suggestion has any descendants, display them to the user
+                            descendantsText.innerHTML = `You selected <strong>${suggestion}</strong>. To help users find your data, you might consider adding some of these more specific concepts if they apply: ${descendants.join(', ')}`;
+                        }
+                        else descendantsText.innerHTML = `You selected <strong>${suggestion}</strong>.`;
                     });
                     suggestionsList.appendChild(item);  // Add this list element to the displayed suggestions list
                 });

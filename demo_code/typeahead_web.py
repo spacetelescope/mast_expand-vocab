@@ -102,15 +102,15 @@ def get_completions():
     return jsonify(completions_added)
 
 
+@app.route('/descendants', methods=['GET'])
+def get_descendants():
+    input_concept = request.args.get('q', '')
+    if input_concept in tags:
+        return jsonify(descendants[input_concept])
+
+
 def main():
     app.run(debug=True)
-
-    # print('You selected:', user_input)
-    # if len(descendants[user_input]) > 0:
-    #     # Suggest descendants
-    #     print('which has these descendants:')
-    #     for i in descendants[user_input]:
-    #         print(f'  - {i}')
 
 
 if __name__ == '__main__':
