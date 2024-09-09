@@ -1,5 +1,3 @@
-from prompt_toolkit import prompt
-from prompt_toolkit.completion import Completer, Completion
 from rdflib import Graph, Namespace
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -88,7 +86,7 @@ def get_completions():
         if tag not in completions_added and all(x.lower() in tag.lower() for x in words):
             completions_added.append(tag)
 
-    # Add synonyms to suggestions, but make them a different color.
+    # Add synonyms to suggestions
     for tag, syn_list in synonyms.items():
         for synonym in syn_list:
             for word in words:
