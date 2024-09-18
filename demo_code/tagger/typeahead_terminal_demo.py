@@ -114,6 +114,10 @@ def main():
             print('which has these descendants:')
             for i in descendants[user_input]:
                 print(f'  - {i}')
+            # print('')
+            # print('The front-end will query for collections tagged with concepts in this list:')
+            # print('')
+            # print(str(tuple(descendants[user_input])))
 
 
 if __name__ == '__main__':
