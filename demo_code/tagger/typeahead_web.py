@@ -1,6 +1,8 @@
 from rdflib import Graph, Namespace
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+import threading
+import time
 
 app = Flask(__name__)
 CORS(app)
@@ -107,9 +109,17 @@ def get_descendants():
         return jsonify(descendants[input_concept])
 
 
-def main():
-    app.run(debug=True)
+def run_api():
+    app.run(debug=False, port=5000)
+
+
+# Only used by app version
+def run_api_in_background():
+    flask_thread = threading.Thread(target=run_api)
+    flask_thread.daemon = True
+    flask_thread.start()
+    time.sleep(1)
 
 
 if __name__ == '__main__':
-    main()
+    run_api()
