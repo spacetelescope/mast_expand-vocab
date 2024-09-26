@@ -10,7 +10,7 @@ class MASTDataProductTagger:
         self.master.title("MAST Data Product Tagger")
 
         # Set a minimum window size
-        self.master.minsize(1150, 500)
+        self.master.minsize(1400, 700)
 
         # Create a canvas and a scrollbar
         self.canvas = tk.Canvas(master)
@@ -31,20 +31,20 @@ class MASTDataProductTagger:
         self.current_product_entry = None  # To track the currently focused product entry
 
         # Header
-        header = tk.Label(self.scrollable_frame, text="MAST Data Product Tagger", font=("Arial", 16))
+        header = tk.Label(self.scrollable_frame, text="MAST Data Product Tagger", font=("Arial", 18))
         header.pack(pady=10)
 
         self.info_label = tk.Label(self.scrollable_frame, text=(
             "Please enter each suffix.extension pair that your data collection contains, then start tagging!\n"
             "For example, if your file looks like '*_spec.fits', then suffix='spec', extension='fits', "
             "and you might tag this product as 'Spectra'.\n"
-            "You can tag each product type with as many tags as you like!"), font=("Arial", 14))
+            "You can tag each product type with as many tags as you like!"), font=("Arial", 18))
         self.info_label.pack(pady=10)
 
         # Entry box for collection name
-        self.collection_entry_label = tk.Label(self.scrollable_frame, text="Collection name:", font=("Arial", 14))
+        self.collection_entry_label = tk.Label(self.scrollable_frame, text="Collection name:", font=("Arial", 18))
         self.collection_entry_label.pack(pady=5)
-        self.collection_entry = tk.Entry(self.scrollable_frame)
+        self.collection_entry = tk.Entry(self.scrollable_frame, font=("Arial", 18))
         self.collection_entry.pack(pady=5)
 
         # Set up table with scrollbar
@@ -60,7 +60,7 @@ class MASTDataProductTagger:
         self.export_button.pack(pady=5)
 
         # Suggestions (typeahead) label above the suggestions list
-        self.suggestions_label = tk.Label(self.table_frame, text="Select from type-ahead suggestions:", font=("Arial", 14))
+        self.suggestions_label = tk.Label(self.table_frame, text="Select from type-ahead suggestions:", font=("Arial", 18), fg='white')
         self.suggestions_label.pack(pady=(0, 5), anchor="e")  # Pack above the suggestions frame
 
         # Suggestions (typeahead) frame
@@ -68,7 +68,7 @@ class MASTDataProductTagger:
         self.suggestions_frame.pack(side=tk.RIGHT, fill=tk.Y)
 
         # Suggestions list and scrollbar
-        self.suggestions_list = tk.Listbox(self.suggestions_frame, height=10, width=30)
+        self.suggestions_list = tk.Listbox(self.suggestions_frame, height=10, width=30, font=("Arial", 18))
         self.suggestions_list.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
         self.suggestions_scrollbar = tk.Scrollbar(self.suggestions_frame)
@@ -81,7 +81,7 @@ class MASTDataProductTagger:
         # Initial row
         self.add_row()
 
-        self.result_label = tk.Label(self.scrollable_frame, text="", font=("Arial", 16))
+        self.result_label = tk.Label(self.scrollable_frame, text="", font=("Arial", 18))
         self.result_label.pack(pady=10)
 
         # Bind the resize event to update wraplength
@@ -98,19 +98,19 @@ class MASTDataProductTagger:
         """Add a row to the entry table"""
         frame = tk.Frame(self.table_frame)
 
-        suffix_label = tk.Label(frame, text="Suffix:", font=("Arial", 14))
+        suffix_label = tk.Label(frame, text="Suffix:", font=("Arial", 18))
         suffix_label.grid(row=0, column=0)
-        suffix_entry = tk.Entry(frame)
+        suffix_entry = tk.Entry(frame, font=("Arial", 18), width=10)
         suffix_entry.grid(row=0, column=1)
 
-        extension_label = tk.Label(frame, text="Extension:", font=("Arial", 14))
+        extension_label = tk.Label(frame, text="Extension:", font=("Arial", 18))
         extension_label.grid(row=0, column=2)
-        extension_entry = tk.Entry(frame)
+        extension_entry = tk.Entry(frame, font=("Arial", 18), width=10)
         extension_entry.grid(row=0, column=3)
 
-        product_label = tk.Label(frame, text="Data Product Type:", font=("Arial", 14))
+        product_label = tk.Label(frame, text="Data Product Types:", font=("Arial", 18))
         product_label.grid(row=0, column=4)
-        product_entry = tk.Entry(frame)
+        product_entry = tk.Entry(frame, font=("Arial", 18))
         product_entry.grid(row=0, column=5)
 
         # Bind entry to fetch suggestions and track focus
@@ -169,7 +169,7 @@ class MASTDataProductTagger:
         # Send query to autocomplete and display results
         response = requests.get(f"http://127.0.0.1:5000/autocomplete?q={query_to_send}")
         if response.ok:
-            self.suggestions_label.config(text="Select from type-ahead suggestions:", font=("Arial", 14))  # Reset label text
+            self.suggestions_label.config(text="Select from type-ahead suggestions:", font=("Arial", 18), fg='white')  # Reset label text
             suggestions = response.json()
             self.suggestions_list.delete(0, tk.END)
             for suggestion in suggestions:
@@ -177,7 +177,7 @@ class MASTDataProductTagger:
 
     def fetch_descendants(self, suggestion):
         """Retrieve and display descendants"""
-        self.suggestions_label.config(text="Consider these more specific tags:", font=("Arial", 14))  # Update label text
+        self.suggestions_label.config(text="Consider these more specific tags too:", font=("Arial", 18), fg='#40E0D0')  # Update label text
         response = requests.get(f"http://127.0.0.1:5000/descendants?q={suggestion}")
         if response.ok:
             suggestions = response.json()
