@@ -64,7 +64,7 @@ class MASTDataProductTagger:
         self.suggestions_label.pack(pady=(0, 5), anchor="e")  # Pack above the suggestions frame
 
         # Suggestions (typeahead) frame
-        self.suggestions_frame = tk.Frame(self.table_frame)
+        self.suggestions_frame = tk.Frame(self.table_frame, bd=8, relief="solid")
         self.suggestions_frame.pack(side=tk.RIGHT, fill=tk.Y)
 
         # Suggestions list and scrollbar
@@ -113,24 +113,32 @@ class MASTDataProductTagger:
         product_entry = tk.Entry(frame, font=("Arial", 18))
         product_entry.grid(row=0, column=5)
 
+        # pink line to separate suggestions list
+        line_canvas = tk.Canvas(frame, width=20, bg='white', highlightthickness=0)
+        line_canvas.grid(row=0, column=6, stick='ns', padx=(30, 30))
+        line_canvas.config(height=frame.winfo_height())
+
         # Bind entry to fetch suggestions and track focus
-        suffix_entry.bind("<FocusIn>", lambda event: self.on_focus(product_entry))
-        extension_entry.bind("<FocusIn>", lambda event: self.on_focus(product_entry))
+        suffix_entry.bind("<FocusIn>", lambda event: self.on_focus(product_entry, line_canvas))
+        extension_entry.bind("<FocusIn>", lambda event: self.on_focus(product_entry, line_canvas))
         product_entry.bind("<KeyRelease>", lambda event: self.fetch_suggestions(product_entry.get()))
-        product_entry.bind("<FocusIn>", lambda event: self.on_focus(product_entry))
+        product_entry.bind("<FocusIn>", lambda event: self.on_focus(product_entry, line_canvas))
 
         # Bind selection to the on_select method
         self.suggestions_list.bind("<<ListboxSelect>>", self.on_select)
 
         frame.pack(pady=5)
-        self.rows.append((suffix_entry, extension_entry, product_entry))
+        self.rows.append((suffix_entry, extension_entry, product_entry, line_canvas))
 
-    def on_focus(self, product_entry):
+    def on_focus(self, product_entry, line_canvas):
         """Handle focus on an entry field and clear suggestions if a different row is focused."""
+        for row in self.rows:
+            row[3].config(bg='white')  # Change line color to white
         if self.current_product_entry is not None and self.current_product_entry != product_entry:
             self.suggestions_list.delete(0, tk.END)  # Clear suggestions if a different row is focused
 
         self.current_product_entry = product_entry  # Update the current focused product entry
+        line_canvas.config(bg='pink')
 
     def on_select(self, event):
         """Handle selection of a suggestion from the typeahead or descendants"""
