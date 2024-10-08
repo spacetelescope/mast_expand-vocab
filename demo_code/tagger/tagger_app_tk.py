@@ -207,7 +207,7 @@ class MASTDataProductTagger:
         with open(f'{collection}_map.csv', 'w', newline='') as csvfile:
             csvwriter = csv.writer(csvfile)
             csvwriter.writerow(['ingest_id', 'ingest_suffix', 'ingest_format', 'ingest_uri_short'])
-            for suffix_entry, extension_entry, product_entry in self.rows:
+            for suffix_entry, extension_entry, product_entry, line_canvas in self.rows:
                 suffix = suffix_entry.get().strip().lower()
                 extension = extension_entry.get().strip().lower()
                 data_product_types = product_entry.get().strip().split(',')
