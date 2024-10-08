@@ -100,8 +100,8 @@ class MASTDataProductTagger:
         self.suggestions_list.bind("<Motion>", self.on_hover)
 
         # Temporary hack: set list of suffix and extension suggestions
-        self.suffix_suggestions = ["asdf", "csv", "db", "ecsv", "fits", "jpeg", "jpg", "md", "pdf", "png", "txt"]
-        self.extension_suggestions = ['cat', 'drz', 'img', 'model', 'spec']
+        self.extension_suggestions = ["asdf", "csv", "db", "ecsv", "fits", "jpeg", "jpg", "md", "pdf", "png", "txt"]
+        self.suffix_suggestions = ['cat', 'drz', 'img', 'model', 'spec']
         self.basis_suggestions = ['Observations', 'Derived properties', 'Synthetic models']
         self.intent_suggestions = ['Science', 'Calibration', 'Preview', 'Noise', 'Weight map', 'Bias', 'Dark', 'Flat', 'Exposure map', 'Other']
 
@@ -348,6 +348,7 @@ class MASTDataProductTagger:
         self.current_basis_entry = basis_entry
         self.current_suffix_entry = None  # Clear the suffix focus
         self.current_product_entry = None  # Clear product focus
+        self.current_extension_entry = None  # Clear extension focus
         self.current_intent_entry = None  # Clear intent focus
         self.show_basis_suggestions()
         for row in self.rows:
@@ -357,6 +358,7 @@ class MASTDataProductTagger:
     def on_intent_focus(self, intent_entry, line_canvas):
         self.current_intent_entry = intent_entry
         self.current_suffix_entry = None  # Clear the suffix focus
+        self.current_extension_entry = None  # Clear extension focus
         self.current_product_entry = None  # Clear product focus
         self.current_basis_entry = None  # Clear basis focus
 
