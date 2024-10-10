@@ -103,7 +103,7 @@ class MASTDataProductTagger:
         self.extension_suggestions = ["asdf", "csv", "db", "ecsv", "fits", "jpeg", "jpg", "md", "pdf", "png", "txt"]
         self.suffix_suggestions = ['cat', 'drz', 'img', 'model', 'spec']
         self.basis_suggestions = ['Observations', 'Derived properties', 'Synthetic models']
-        self.intent_suggestions = ['Science', 'Calibration', 'Preview', 'Noise', 'Weight map', 'Bias', 'Dark', 'Flat', 'Exposure map', 'Other']
+        self.intent_suggestions = ['Science', 'Preview', 'Background map', 'Exposure map', 'Noise map', 'Weight map', 'Bias frame', 'Dark frame', 'Flat field', 'Other']
 
     def update_wraplength(self, event):
         """Update the wraplength of the result_label based on the window width."""
@@ -128,7 +128,7 @@ class MASTDataProductTagger:
         basis_entry = tk.Entry(frame, font=("Arial", 18), width=10)
         basis_entry.grid(row=0, column=5)
 
-        intent_label = tk.Label(frame, text="Intent:", font=("Arial", 18))
+        intent_label = tk.Label(frame, text="Role:", font=("Arial", 18))
         intent_label.grid(row=0, column=6)
         intent_entry = tk.Entry(frame, font=("Arial", 18), width=10)
         intent_entry.grid(row=0, column=7)
@@ -268,14 +268,14 @@ class MASTDataProductTagger:
     def show_basis_suggestions(self):
         """Display basis suggestions when the basis entry is focused."""
         self.suggestions_list.delete(0, tk.END)
-        self.suggestions_label.config(text="Select at least one basis from this list:", font=("Arial", 18), fg='pink')  # Update label text
+        self.suggestions_label.config(text="Select the one best-fitting basis from this list:", font=("Arial", 18), fg='pink')  # Update label text
         for suggestion in self.basis_suggestions:
             self.suggestions_list.insert(tk.END, suggestion)
 
     def show_intent_suggestions(self):
         """Display intent suggestions when the intent entry is focused."""
         self.suggestions_list.delete(0, tk.END)
-        self.suggestions_label.config(text="Select the one best-fitting intent from this list:", font=("Arial", 18), fg='pink')  # Update label text
+        self.suggestions_label.config(text="Select the one best-fitting role from this list:", font=("Arial", 18), fg='pink')  # Update label text
         for suggestion in self.intent_suggestions:
             self.suggestions_list.insert(tk.END, suggestion)
 
