@@ -103,7 +103,7 @@ class MASTDataProductTagger:
         self.extension_suggestions = ["asdf", "csv", "db", "ecsv", "fits", "jpeg", "jpg", "md", "pdf", "png", "txt"]
         self.suffix_suggestions = ['cat', 'drz', 'img', 'model', 'spec']
         self.basis_suggestions = ['Observations', 'Derived properties', 'Synthetic models']
-        self.intent_suggestions = ['Science', 'Preview', 'Background map', 'Exposure map', 'Noise map', 'Weight map', 'Bias frame', 'Dark frame', 'Flat field', 'Other']
+        self.intent_suggestions = ['Science', 'Preview', 'Background map', 'Error map', 'Exposure map', 'Noise map', 'Weight map', 'Bias frame', 'Dark frame', 'Flat field', 'Other']
 
     def update_wraplength(self, event):
         """Update the wraplength of the result_label based on the window width."""
