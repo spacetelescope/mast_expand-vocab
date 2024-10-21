@@ -12,13 +12,18 @@ class MASTDataProductTagger:
         self.master = master
         self.master.title("MAST Data Product Tagger")
 
+        self.pink = 'white'
+        self.blue = '#40E0D0'
+        self.yellow = 'black'
+
         # Set a minimum window size
-        self.master.minsize(1650, 700)
+        self.master.minsize(1200, 700)
 
         # Create a canvas and a scrollbar
         self.canvas = tk.Canvas(master)
         self.scrollbar = tk.Scrollbar(master, orient="vertical", command=self.canvas.yview)
         self.scrollable_frame = tk.Frame(self.canvas)
+        self.master.bind("<MouseWheel>", self.on_vertical)
 
         # Configure the canvas
         self.scrollable_frame.bind("<Configure>", lambda e: self.canvas.configure(scrollregion=self.canvas.bbox("all")))
@@ -65,11 +70,11 @@ class MASTDataProductTagger:
         self.export_button.pack(pady=5)
 
         # Suggestions (typeahead) label above the suggestions list
-        self.suggestions_label = tk.Label(self.table_frame, text="Select from type-ahead suggestions:", font=("Arial", 18), fg='white')
+        self.suggestions_label = tk.Label(self.table_frame, text="Select from type-ahead suggestions:", font=("Arial", 18))
         self.suggestions_label.pack(pady=(0, 5), anchor="e")  # Pack above the suggestions frame
 
         # Suggestions (typeahead) frame
-        self.suggestions_frame = tk.Frame(self.table_frame, bd=8, relief="solid")
+        self.suggestions_frame = tk.Frame(self.table_frame, bd=8, relief="raised")
         self.suggestions_frame.pack(side=tk.RIGHT, fill=tk.Y)
 
         # Suggestions list and scrollbar
@@ -105,6 +110,12 @@ class MASTDataProductTagger:
         self.basis_suggestions = ['Observations', 'Derived properties', 'Synthetic models']
         self.intent_suggestions = ['Science', 'Preview', 'Background map', 'Error map', 'Exposure map', 'Noise map', 'Weight map', 'Bias frame', 'Dark frame', 'Flat field', 'Other']
 
+    def on_vertical(self, event):
+        """Handle mouse wheel scroll."""
+        widget_at_mouse = self.master.winfo_containing(event.x_root, event.y_root)
+        if widget_at_mouse != self.suggestions_list:
+            self.canvas.yview_scroll(-1 * event.delta, 'units')
+
     def update_wraplength(self, event):
         """Update the wraplength of the result_label based on the window width."""
         self.result_label.config(wraplength=self.master.winfo_width() - 20)
@@ -113,36 +124,35 @@ class MASTDataProductTagger:
         """Add a row to the entry table"""
         frame = tk.Frame(self.table_frame)
 
-        suffix_label = tk.Label(frame, text="Suffix:", font=("Arial", 18))
-        suffix_label.grid(row=0, column=0)
-        suffix_entry = tk.Entry(frame, font=("Arial", 18), width=10)
-        suffix_entry.grid(row=0, column=1)
+        defaultentrywidth = 10
 
-        extension_label = tk.Label(frame, text="Extension:", font=("Arial", 18))
-        extension_label.grid(row=0, column=2)
-        extension_entry = tk.Entry(frame, font=("Arial", 18), width=10)
-        extension_entry.grid(row=0, column=3)
+        # Create label row
+        tk.Label(frame, text="Suffix", font=("Arial", 18)).grid(row=0, column=0)
+        tk.Label(frame, text="Extension", font=("Arial", 18)).grid(row=0, column=2)
+        tk.Label(frame, text="Basis", font=("Arial", 18)).grid(row=0, column=4)
+        tk.Label(frame, text="Role", font=("Arial", 18)).grid(row=0, column=6)
+        tk.Label(frame, text="Data Product Type", font=("Arial", 18)).grid(row=0, column=8)
 
-        basis_label = tk.Label(frame, text="Basis:", font=("Arial", 18))
-        basis_label.grid(row=0, column=4)
-        basis_entry = tk.Entry(frame, font=("Arial", 18), width=10)
-        basis_entry.grid(row=0, column=5)
+        # Create entry row
+        suffix_entry = tk.Entry(frame, font=("Arial", 18), width=defaultentrywidth)
+        suffix_entry.grid(row=1, column=0)
 
-        intent_label = tk.Label(frame, text="Role:", font=("Arial", 18))
-        intent_label.grid(row=0, column=6)
-        intent_entry = tk.Entry(frame, font=("Arial", 18), width=10)
-        intent_entry.grid(row=0, column=7)
+        extension_entry = tk.Entry(frame, font=("Arial", 18), width=defaultentrywidth)
+        extension_entry.grid(row=1, column=2)
 
-        product_label = tk.Label(frame, text="Data Product Types:", font=("Arial", 18))
-        product_label.grid(row=0, column=8)
+        basis_entry = tk.Entry(frame, font=("Arial", 18), width=defaultentrywidth)
+        basis_entry.grid(row=1, column=4)
+
+        intent_entry = tk.Entry(frame, font=("Arial", 18), width=defaultentrywidth)
+        intent_entry.grid(row=1, column=6)
+
         product_entry = tk.Entry(frame, font=("Arial", 18))
-        product_entry.grid(row=0, column=9)
-
+        product_entry.grid(row=1, column=8)
         product_entry.config(state=tk.DISABLED)
 
         # pink line to separate suggestions list
         line_canvas = tk.Canvas(frame, width=20, bg='white', highlightthickness=0)
-        line_canvas.grid(row=0, column=10, stick='ns', padx=(30, 30))
+        line_canvas.grid(row=1, column=10, stick='ns', padx=(30, 30))
         line_canvas.config(height=frame.winfo_height())
 
         # Bind entry to fetch suggestions and track focus
@@ -175,9 +185,9 @@ class MASTDataProductTagger:
         self.current_intent_entry = None  # Clear intent focus
 
         if 'specific' not in self.suggestions_label.cget("text"):
-            self.suggestions_label.config(text="Select from type-ahead suggestions:", font=("Arial", 18), fg='white')  # Reset label text
+            self.suggestions_label.config(text="Select from type-ahead suggestions:", font=("Arial", 18))  # Reset label text
 
-        line_canvas.config(bg='pink')
+        line_canvas.config(bg=self.yellow)
 
     def on_select(self, event, product_entry):
         """Handle selection of a suggestion from the typeahead or descendants"""
@@ -235,7 +245,7 @@ class MASTDataProductTagger:
         # Send query to autocomplete and display results
         response = requests.get(f"http://127.0.0.1:5000/autocomplete?q={query_to_send}")
         if response.ok:
-            self.suggestions_label.config(text="Select from type-ahead suggestions:", font=("Arial", 18), fg='white')  # Reset label text
+            self.suggestions_label.config(text="Select from type-ahead suggestions:", font=("Arial", 18))  # Reset label text
             suggestions = response.json()
             self.suggestions_list.delete(0, tk.END)
             for suggestion in suggestions:
@@ -243,7 +253,7 @@ class MASTDataProductTagger:
 
     def fetch_descendants(self, suggestion):
         """Retrieve and display descendants"""
-        self.suggestions_label.config(text="Consider these more specific tags too:", font=("Arial", 18), fg='#40E0D0')  # Update label text
+        self.suggestions_label.config(text="Consider these more specific tags too:", font=("Arial", 18), fg=self.blue, bg='black')  # Update label text
         response = requests.get(f"http://127.0.0.1:5000/descendants?q={suggestion}")
         if response.ok:
             suggestions = response.json()
@@ -254,28 +264,28 @@ class MASTDataProductTagger:
     def show_suffix_suggestions(self):
         """Display suffix suggestions when the suffix entry is focused."""
         self.suggestions_list.delete(0, tk.END)
-        self.suggestions_label.config(text="Non-exclusive list of common filename suffixes:", font=("Arial", 18), fg='pink')  # Update label text
+        self.suggestions_label.config(text="Non-exclusive list of common filename suffixes:", font=("Arial", 18), fg=self.pink, bg='black')  # Update label text
         for suggestion in self.suffix_suggestions:
             self.suggestions_list.insert(tk.END, suggestion)
 
     def show_extension_suggestions(self):
         """Display extension suggestions when the extension entry is focused."""
         self.suggestions_list.delete(0, tk.END)
-        self.suggestions_label.config(text="Non-exclusive list of common filename extensions:", font=("Arial", 18), fg='pink')  # Update label text
+        self.suggestions_label.config(text="Non-exclusive list of common filename extensions:", font=("Arial", 18), fg=self.pink, bg='black')  # Update label text
         for suggestion in self.extension_suggestions:
             self.suggestions_list.insert(tk.END, suggestion)
 
     def show_basis_suggestions(self):
         """Display basis suggestions when the basis entry is focused."""
         self.suggestions_list.delete(0, tk.END)
-        self.suggestions_label.config(text="Select the one best-fitting basis from this list:", font=("Arial", 18), fg='pink')  # Update label text
+        self.suggestions_label.config(text="Select the one best-fitting basis from this list:", font=("Arial", 18), fg=self.pink, bg='black')  # Update label text
         for suggestion in self.basis_suggestions:
             self.suggestions_list.insert(tk.END, suggestion)
 
     def show_intent_suggestions(self):
         """Display intent suggestions when the intent entry is focused."""
         self.suggestions_list.delete(0, tk.END)
-        self.suggestions_label.config(text="Select the one best-fitting role from this list:", font=("Arial", 18), fg='pink')  # Update label text
+        self.suggestions_label.config(text="Select the one best-fitting role from this list:", font=("Arial", 18), fg=self.pink, bg='black')  # Update label text
         for suggestion in self.intent_suggestions:
             self.suggestions_list.insert(tk.END, suggestion)
 
@@ -331,7 +341,7 @@ class MASTDataProductTagger:
         self.show_suffix_suggestions()
         for row in self.rows:
             row[3].config(bg='white')  # Change line color to white
-        line_canvas.config(bg='pink')
+        line_canvas.config(bg=self.yellow)
 
     def on_extension_focus(self, extension_entry, line_canvas):
         self.current_extension_entry = extension_entry
@@ -342,7 +352,7 @@ class MASTDataProductTagger:
         self.show_extension_suggestions()
         for row in self.rows:
             row[3].config(bg='white')  # Change line color to white
-        line_canvas.config(bg='pink')
+        line_canvas.config(bg=self.yellow)
 
     def on_basis_focus(self, basis_entry, line_canvas):
         self.current_basis_entry = basis_entry
@@ -353,7 +363,7 @@ class MASTDataProductTagger:
         self.show_basis_suggestions()
         for row in self.rows:
             row[3].config(bg='white')  # Change line color to white
-        line_canvas.config(bg='pink')
+        line_canvas.config(bg=self.yellow)
 
     def on_intent_focus(self, intent_entry, line_canvas):
         self.current_intent_entry = intent_entry
@@ -368,7 +378,7 @@ class MASTDataProductTagger:
         self.show_intent_suggestions()
         for row in self.rows:
             row[3].config(bg='white')  # Change line color to white
-        line_canvas.config(bg='pink')
+        line_canvas.config(bg=self.yellow)
 
     def check_intent(self, intent_entry):
         """Enable or disable product_entry based on intent_entry value."""
