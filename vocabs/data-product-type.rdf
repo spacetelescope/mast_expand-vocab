@@ -356,6 +356,9 @@
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Spectral_images"/>
         <skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
         <skos:prefLabel xml:lang="en">Long-slit spectral images</skos:prefLabel>
+        <skos:altLabel xml:lang="en">2-dimensional spectra</skos:altLabel>
+        <skos:hiddenLabel xml:lang="en">2-D spectra</skos:hiddenLabel>
+        <skos:hiddenLabel xml:lang="en">2D spectra</skos:hiddenLabel>
     </skos:Concept>
     
 
@@ -442,7 +445,18 @@
         <skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
         <skos:prefLabel xml:lang="en">Navigated images</skos:prefLabel>
     </skos:Concept>
-    
+
+ 
+     <!-- https://archive.stsci.edu/rdf/data-product-type#One-dimensional_spectra -->
+
+    <skos:Concept rdf:about="https://archive.stsci.edu/rdf/data-product-type#One-dimensional_spectra">
+        <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Spectra"/>
+        <skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
+        <skos:prefLabel xml:lang="en">One-dimensional spectra</skos:prefLabel>
+	<skos:hiddenLabel xml:lang="en">1D spectra</skos:hiddenLabel>
+	<skos:hiddenLabel xml:lang="en">1-D spectra</skos:hiddenLabel>
+    </skos:Concept>
 
 
     <!-- https://archive.stsci.edu/rdf/data-product-type#Photometry_catalogs -->
@@ -598,9 +612,12 @@
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Spectral_images"/>
         <skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
         <skos:altLabel xml:lang="en">Cube</skos:altLabel>
+	<skos:altLabel xml:lang="en">3-dimensional spectra</skos:altLabel>
         <skos:altLabel xml:lang="en">Hyperspectral image</skos:altLabel>
         <skos:altLabel xml:lang="en">Integral field spectra</skos:altLabel>
         <skos:altLabel xml:lang="en">Multispectral image</skos:altLabel>
+	<skos:hiddenLabel xml:lang="en">3D spectra</skos:hiddenLabel>
+	<skos:hiddenLabel xml:lang="en">3-D spectra</skos:hiddenLabel>
         <skos:prefLabel xml:lang="en">Spectral image cubes</skos:prefLabel>
     </skos:Concept>
     
@@ -616,7 +633,6 @@
         <skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
         <skos:altLabel xml:lang="en">Hyperspectral Image</skos:altLabel>
         <skos:altLabel xml:lang="en">Imaging Spectroscopy</skos:altLabel>
-        <skos:hiddenLabel xml:lang="en">Cube</skos:hiddenLabel>
         <skos:hiddenLabel xml:lang="en">Hyperspectral Imaging</skos:hiddenLabel>
         <skos:hiddenLabel xml:lang="en">Spectral Imaging</skos:hiddenLabel>
         <skos:prefLabel xml:lang="en">Spectral images</skos:prefLabel>
@@ -766,9 +782,11 @@
         <skos:broader rdf:resource="https://archive.stsci.edu/rdf/data-product-type#Time_series"/>
         <skos:closeMatch rdf:resource="https://www.ivoa.net/rdf/product-type#time-cube"/>
         <skos:inScheme rdf:resource="https://archive.stsci.edu/rdf/data-product-type#DataProductType_HLSP"/>
-        <skos:altLabel xml:lang="en">Cube</skos:altLabel>
-        <skos:altLabel xml:lang="en">Dynamic Image</skos:altLabel>
+        <skos:altLabel xml:lang="en">Cubes</skos:altLabel>
+        <skos:altLabel xml:lang="en">Dynamic Images</skos:altLabel>
         <skos:hiddenLabel xml:lang="en">Time-Series Image</skos:hiddenLabel>
+	<skos:hiddenLabel xml:lang="en">3D images</skos:hiddenLabel>
+        <skos:hiddenLabel xml:lang="en">3-D images</skos:hiddenLabel>
         <skos:prefLabel xml:lang="en">Time series images</skos:prefLabel>
     </skos:Concept>
     
