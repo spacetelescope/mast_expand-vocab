@@ -93,6 +93,7 @@ class MASTDataProductTagger:
         self.read_directory_button.pack(pady=5)
 
         # Initial row
+        self.first_row_added = False
         self.add_row()
 
         self.result_label = tk.Label(self.scrollable_frame, text="", font=("Arial", 18))
@@ -126,12 +127,13 @@ class MASTDataProductTagger:
 
         defaultentrywidth = 10
 
-        # Create label row
-        tk.Label(frame, text="Suffix", font=("Arial", 18)).grid(row=0, column=0)
-        tk.Label(frame, text="Extension", font=("Arial", 18)).grid(row=0, column=2)
-        tk.Label(frame, text="Basis", font=("Arial", 18)).grid(row=0, column=4)
-        tk.Label(frame, text="Role", font=("Arial", 18)).grid(row=0, column=6)
-        tk.Label(frame, text="Data Product Type", font=("Arial", 18)).grid(row=0, column=8)
+        if not self.first_row_added:
+            # Create label row
+            tk.Label(frame, text="Suffix", font=("Arial", 18)).grid(row=0, column=0)
+            tk.Label(frame, text="Extension", font=("Arial", 18)).grid(row=0, column=2)
+            tk.Label(frame, text="Basis", font=("Arial", 18)).grid(row=0, column=4)
+            tk.Label(frame, text="Role", font=("Arial", 18)).grid(row=0, column=6)
+            tk.Label(frame, text="Data Product Type", font=("Arial", 18)).grid(row=0, column=8)
 
         # Create entry row
         suffix_entry = tk.Entry(frame, font=("Arial", 18), width=defaultentrywidth)
@@ -168,6 +170,7 @@ class MASTDataProductTagger:
 
         frame.pack(pady=5)
         self.rows.append((suffix_entry, extension_entry, product_entry, line_canvas, intent_entry))
+        self.first_row_added = True
 
     def on_product_focus(self, product_entry, line_canvas):
         """Handle focus on an entry field and clear suggestions if a different row is focused."""
