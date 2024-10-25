@@ -12,6 +12,7 @@ class MASTDataProductTagger:
         self.master = master
         self.master.title("MAST Data Product Tagger")
 
+        # Confusing hack. Fix this later.
         self.pink = 'white'
         self.blue = '#40E0D0'
         self.yellow = 'black'
@@ -37,8 +38,8 @@ class MASTDataProductTagger:
         self.rows = []  # To hold the entries
         self.current_row_index = None  # To track the currently focused row
         self.current_product_entry = None  # To track the currently focused product entry
-        self.current_suffix_entry = None
-        self.current_extension_entry = None
+        self.current_suffix_entry = None  # To track the currently focused suffix entry
+        self.current_extension_entry = None  # To track the currently focused extension entry
 
         # Header
         header = tk.Label(self.scrollable_frame, text="MAST Data Product Tagger", font=("Arial", 18))
@@ -46,9 +47,8 @@ class MASTDataProductTagger:
 
         self.info_label = tk.Label(self.scrollable_frame, text=(
             "Please enter each suffix.extension pair that your data collection contains, then start tagging!\n"
-            "For example, if your file looks like '*_spec.fits', then suffix='spec', extension='fits', "
-            "and you might tag this product as 'Spectra'.\n"
-            "You can tag each product type with as many tags as you like!"), font=("Arial", 18))
+            "For example, if your file looks like '*_spec.fits', then suffix='spec', extension='fits'.\n"
+            "You can tag each row with as many data product types as you like!"), font=("Arial", 18))
         self.info_label.pack(pady=10)
 
         # Entry box for collection name
@@ -65,12 +65,12 @@ class MASTDataProductTagger:
         self.add_row_button = tk.Button(self.scrollable_frame, text="Add Row", command=self.add_row)
         self.add_row_button.pack(pady=5)
 
-        # "Export to csv" button; will be converted to github merge request later
+        # "Export to csv" button; may be converted to github merge request later
         self.export_button = tk.Button(self.scrollable_frame, text="Export CSV", command=self.export_to_csv)
         self.export_button.pack(pady=5)
 
         # Suggestions (typeahead) label above the suggestions list
-        self.suggestions_label = tk.Label(self.table_frame, text="Select from type-ahead suggestions:", font=("Arial", 18))
+        self.suggestions_label = tk.Label(self.table_frame, text="Select tags from type-ahead suggestions:", font=("Arial", 18))
         self.suggestions_label.pack(pady=(0, 5), anchor="e")  # Pack above the suggestions frame
 
         # Suggestions (typeahead) frame
@@ -105,7 +105,7 @@ class MASTDataProductTagger:
         # Bind hover events for suggestions
         self.suggestions_list.bind("<Motion>", self.on_hover)
 
-        # Temporary hack: set list of suffix and extension suggestions
+        # Fix this later to pull from yaml/skos: set list of suffix and extension suggestions
         self.extension_suggestions = ["asdf", "csv", "db", "ecsv", "fits", "jpeg", "jpg", "md", "pdf", "png", "txt"]
         self.suffix_suggestions = ['cat', 'drz', 'img', 'model', 'spec']
         self.basis_suggestions = ['Observations', 'Derived properties', 'Synthetic models']
@@ -127,6 +127,7 @@ class MASTDataProductTagger:
 
         defaultentrywidth = 10
 
+        # Add labels if this is the initial row
         if not self.first_row_added:
             # Create label row
             tk.Label(frame, text="Suffix", font=("Arial", 18)).grid(row=0, column=0)
@@ -152,7 +153,7 @@ class MASTDataProductTagger:
         product_entry.grid(row=1, column=8)
         product_entry.config(state=tk.DISABLED)
 
-        # pink line to separate suggestions list
+        # line to separate suggestions list
         line_canvas = tk.Canvas(frame, width=20, bg='white', highlightthickness=0)
         line_canvas.grid(row=1, column=10, stick='ns', padx=(30, 30))
         line_canvas.config(height=frame.winfo_height())
@@ -168,8 +169,11 @@ class MASTDataProductTagger:
         # Bind selection to the on_select method
         self.suggestions_list.bind("<<ListboxSelect>>", lambda event: self.on_select(event, product_entry))
 
+        # Append row
         frame.pack(pady=5)
         self.rows.append((suffix_entry, extension_entry, product_entry, line_canvas, intent_entry))
+
+        # Tracker to indicate that future rows will not be the initial row
         self.first_row_added = True
 
     def on_product_focus(self, product_entry, line_canvas):
@@ -187,9 +191,11 @@ class MASTDataProductTagger:
         self.current_basis_entry = None  # Clear basis focus
         self.current_intent_entry = None  # Clear intent focus
 
+        # Fix this later.
         if 'specific' not in self.suggestions_label.cget("text"):
             self.suggestions_label.config(text="Select from type-ahead suggestions:", font=("Arial", 18))  # Reset label text
 
+        # Highlight row.
         line_canvas.config(bg=self.yellow)
 
     def on_select(self, event, product_entry):
@@ -213,6 +219,7 @@ class MASTDataProductTagger:
                 self.master.after(100, lambda: self.current_product_entry.icursor(tk.END))
                 self.current_product_entry.xview(tk.END)
 
+            # Fix this later.
             elif self.current_suffix_entry is not None:
                 self.current_suffix_entry.delete(0, tk.END)
                 self.current_suffix_entry.insert(0, suggestion)
@@ -241,12 +248,12 @@ class MASTDataProductTagger:
         last_comma_index = query.rfind(',')
         query_to_send = query[last_comma_index + 1:].strip() if last_comma_index != -1 else query.strip()
 
-        if not query_to_send:  # if no text has been entered after the most recent comma
+        if not query_to_send:  # clear typeahead if no text has been entered after the most recent comma
             self.suggestions_list.delete(0, tk.END)
             return
 
         # Send query to autocomplete and display results
-        response = requests.get(f"http://127.0.0.1:5000/autocomplete?q={query_to_send}")
+        response = requests.get(f"http://127.0.0.1:5000/autocomplete?q={query_to_send}")  # Fix this later.
         if response.ok:
             self.suggestions_label.config(text="Select from type-ahead suggestions:", font=("Arial", 18))  # Reset label text
             suggestions = response.json()
@@ -257,7 +264,7 @@ class MASTDataProductTagger:
     def fetch_descendants(self, suggestion):
         """Retrieve and display descendants"""
         self.suggestions_label.config(text="Consider these more specific tags too:", font=("Arial", 18), fg=self.blue, bg='black')  # Update label text
-        response = requests.get(f"http://127.0.0.1:5000/descendants?q={suggestion}")
+        response = requests.get(f"http://127.0.0.1:5000/descendants?q={suggestion}")  # Fix this later.
         if response.ok:
             suggestions = response.json()
             self.suggestions_list.delete(0, tk.END)
@@ -316,7 +323,7 @@ class MASTDataProductTagger:
                 data_product_types = product_entry.get().strip().split(',')
                 for ptype in data_product_types:
                     if suffix and extension and ptype:
-                        ptype = ptype.strip().replace(' ', '_')  # temporary fix for the fact that I haven't integrated URIs
+                        ptype = ptype.strip().replace(' ', '_')  # temporary fix for the fact that I haven't integrated URIs. Fix this later.
                         csvwriter.writerow([collection, suffix, extension, ptype])
 
     def read_directory(self):
@@ -412,7 +419,7 @@ def find_suffix_extensions(directory) -> list:
 def main():
     run_api_in_background()
     root = tk.Tk()
-    app = MASTDataProductTagger(root)
+    MASTDataProductTagger(root)
     root.mainloop()
 
 
