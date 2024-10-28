@@ -17,16 +17,18 @@ g.parse(rdf_file_url, format="xml")
 # Define SKOS namespace
 skos = Namespace("http://www.w3.org/2004/02/skos/core#")
 
-# Initialize global variables to hold tags, synonyms, and descendants
-tags: list[str] = []  # the list of tags
-synonyms: dict[str, list[str]] = {}  # maps tags to synonym lists
-descendants: dict[str, list[str]] = {}  # maps tags to descendant lists
+# Initialize global variables to hold tags, URIs, synonyms, and descendants
+tags: list[str] = []  # the list of human-readable tags
+synonyms: dict[str, list[str]] = {}  # maps human-readable tags to synonym lists
+descendants: dict[str, list[str]] = {}  # maps human-readable tags to descendant lists
+uris: dict[str, str] = {}  # maps human-readable tags to their short URIs
 
 # Extract tags and synonyms from RDF
 for s, p, o in g.triples((None, skos.prefLabel, None)):
     if isinstance(o, str):
         tag = str(o)
         tags.append(tag)
+        uris[tag] = str(s).split('#')[1]  # get short URI
         synonyms[tag] = []
 
         # Populate descendants
@@ -108,6 +110,14 @@ def get_completions() -> Response:
 def get_descendants() -> Response:
     input_concept = request.args.get('q', '')
     return jsonify(descendants[input_concept])
+
+
+# API to retrieve short URIs of a list of human-readable tags
+@app.route('/uris', methods=['GET'])
+def get_uris() -> Response:
+    input_concepts = request.args.getlist('q')
+    results = {concept: uris.get(concept) for concept in input_concepts}
+    return jsonify(results)
 
 
 # Run from terminal for testing

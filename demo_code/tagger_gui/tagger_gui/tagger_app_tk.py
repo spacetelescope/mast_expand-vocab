@@ -264,12 +264,21 @@ class MASTDataProductTagger:
     def fetch_descendants(self, suggestion):
         """Retrieve and display descendants"""
         self.suggestions_label.config(text="Consider these more specific tags too:", font=("Arial", 18), fg=self.blue, bg='black')  # Update label text
-        response = requests.get(f"http://127.0.0.1:5000/descendants?q={suggestion}")  # Fix this later.
+        response = requests.get(f"http://127.0.0.1:5000/descendants?q={suggestion}")
         if response.ok:
             suggestions = response.json()
             self.suggestions_list.delete(0, tk.END)
             for suggestion in suggestions:
                 self.suggestions_list.insert(tk.END, suggestion)
+
+    def fetch_uris(self, suggestion):
+        """Retrieve URI for selected suggestion, if one exists"""
+        response = requests.get(f"http://127.0.0.1:5000/uris?q={suggestion}")
+        if response.ok and response.json():
+            uri_dict = response.json()
+            return uri_dict[suggestion]
+        else:
+            return suggestion
 
     def show_suffix_suggestions(self):
         """Display suffix suggestions when the suffix entry is focused."""
@@ -323,8 +332,8 @@ class MASTDataProductTagger:
                 data_product_types = product_entry.get().strip().split(',')
                 for ptype in data_product_types:
                     if suffix and extension and ptype:
-                        ptype = ptype.strip().replace(' ', '_')  # temporary fix for the fact that I haven't integrated URIs. Fix this later.
-                        csvwriter.writerow([collection, suffix, extension, ptype])
+                        ptype_uri = self.fetch_uris(ptype.strip())
+                        csvwriter.writerow([collection, suffix, extension, ptype_uri])
 
     def read_directory(self):
         """Read the specified directory and populate unique suffixes."""
