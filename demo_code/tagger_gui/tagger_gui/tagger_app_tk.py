@@ -57,6 +57,17 @@ class MASTDataProductTagger:
         self.collection_entry = tk.Entry(self.scrollable_frame, font=("Arial", 18))
         self.collection_entry.pack(pady=5)
 
+        # Button to open selection dialog
+        self.select_coverage_button = tk.Button(self.scrollable_frame, text="Set sky footprint of your collection", command=self.open_coverage_dialog)
+        self.select_coverage_button.pack(pady=5)
+
+        # Label to show selected coverage
+        self.selected_coverage_label = tk.Label(self.scrollable_frame, text="", font=("Arial", 18))
+        self.selected_coverage_label.pack(pady=5)
+
+        # List of sky coverage options
+        self.coverage_options = ['Individual_objects', 'Source_survey', 'All-sky_source_survey', 'Field_survey', 'All-sky_field_survey']
+
         # Set up table with scrollbar
         self.table_frame = tk.Frame(self.scrollable_frame)
         self.table_frame.pack(pady=10)
@@ -423,6 +434,36 @@ class MASTDataProductTagger:
                 product_entry.config(state=tk.NORMAL)  # Enable editing
             else:
                 product_entry.config(state=tk.DISABLED)  # Disable editing
+
+    def open_coverage_dialog(self):
+        """Open a dialog for selecting multiple coverage options."""
+        self.coverage_dialog = tk.Toplevel(self.master)
+        self.coverage_dialog.title("Set sky footprint of collection")
+
+        self.coverage_listbox = tk.Listbox(self.coverage_dialog, selectmode=tk.MULTIPLE, font=("Arial", 18))
+        for option in self.coverage_options:
+            self.coverage_listbox.insert(tk.END, option)
+        self.coverage_listbox.pack(pady=10)
+
+        confirm_button = tk.Button(self.coverage_dialog, text="Confirm selection and export csv", command=self.confirm_selection)
+        confirm_button.pack(pady=5)
+
+    def confirm_selection(self):
+        """Retrieve selected options and update the label and export to csv."""
+        selected_indices = self.coverage_listbox.curselection()
+        selected_options = [self.coverage_options[i] for i in selected_indices]
+        self.selected_coverage_label.config(text=", ".join(selected_options))
+        collection = self.collection_entry.get().strip().lower()
+
+        # Write to csv. Fix this later.
+
+        with open(f'{collection}_project.csv', 'w', newline='') as csvfile:
+            csvwriter = csv.writer(csvfile)
+            csvwriter.writerow(['ingest_id', 'coverage'])
+            for option in selected_options:
+                csvwriter.writerow([collection, option])
+
+        self.coverage_dialog.destroy()  # Close the dialog
 
 
 def find_suffix_extensions(directory) -> list:
