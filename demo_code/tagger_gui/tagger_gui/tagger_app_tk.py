@@ -106,10 +106,10 @@ class MASTDataProductTagger:
         self.suggestions_list.bind("<Motion>", self.on_hover)
 
         # Fix this later to pull from yaml/skos: set list of suffix and extension suggestions
-        self.extension_suggestions = ["asdf", "csv", "db", "ecsv", "fits", "jpeg", "jpg", "md", "pdf", "png", "txt"]
-        self.suffix_suggestions = ['cat', 'drz', 'img', 'model', 'spec']
-        self.basis_suggestions = ['Observations', 'Derived properties', 'Synthetic models']
-        self.intent_suggestions = ['Science', 'Preview', 'Background map', 'Error map', 'Exposure map', 'Noise map', 'Weight map', 'Bias frame', 'Dark frame', 'Flat field', 'Other']
+        self.extension_suggestions = ["asdf", "csv", "db", "ecsv", "fits", "jpeg", "jpg", "md", "pdf", "png", "txt"]  # Pull from yaml
+        self.suffix_suggestions = ['cat', 'drz', 'img', 'model', 'spec']  # Pull from yaml
+        self.basis_suggestions = ['Observations', 'Observation-derived_physical_properties', 'Synthetic_models']  # Pull from skos
+        self.intent_suggestions = ['science', 'preview', 'background', 'error', 'exposure_time', 'noise', 'weight', 'bias', 'dark', 'flat', 'other']  # Pull from skos
 
     def on_vertical(self, event):
         """Handle mouse wheel scroll."""
@@ -171,7 +171,7 @@ class MASTDataProductTagger:
 
         # Append row
         frame.pack(pady=5)
-        self.rows.append((suffix_entry, extension_entry, product_entry, line_canvas, intent_entry))
+        self.rows.append((suffix_entry, extension_entry, product_entry, line_canvas, intent_entry, basis_entry))
 
         # Tracker to indicate that future rows will not be the initial row
         self.first_row_added = True
@@ -326,7 +326,8 @@ class MASTDataProductTagger:
         with open(f'{collection}_map.csv', 'w', newline='') as csvfile:
             csvwriter = csv.writer(csvfile)
             csvwriter.writerow(['ingest_id', 'ingest_suffix', 'ingest_format', 'ingest_uri_short'])
-            for suffix_entry, extension_entry, product_entry, line_canvas, intent_entry in self.rows:
+
+            for suffix_entry, extension_entry, product_entry, _, _, _ in self.rows:  # write product types to csv
                 suffix = suffix_entry.get().strip().lower()
                 extension = extension_entry.get().strip().lower()
                 data_product_types = product_entry.get().strip().split(',')
@@ -334,6 +335,20 @@ class MASTDataProductTagger:
                     if suffix and extension and ptype:
                         ptype_uri = self.fetch_uris(ptype.strip())
                         csvwriter.writerow([collection, suffix, extension, ptype_uri])
+
+            for suffix_entry, extension_entry, _, _, intent_entry, _ in self.rows:  # write roles to csv
+                suffix = suffix_entry.get().strip().lower()
+                extension = extension_entry.get().strip().lower()
+                intent = intent_entry.get().strip()
+                if suffix and extension and intent:
+                    csvwriter.writerow([collection, suffix, extension, intent])
+
+            for suffix_entry, extension_entry, _, _, _, basis_entry in self.rows:  # write bases to csv
+                suffix = suffix_entry.get().strip().lower()
+                extension = extension_entry.get().strip().lower()
+                basis = basis_entry.get().strip()
+                if suffix and extension and basis:
+                    csvwriter.writerow([collection, suffix, extension, basis])
 
     def read_directory(self):
         """Read the specified directory and populate unique suffixes."""
@@ -401,10 +416,10 @@ class MASTDataProductTagger:
 
     def check_intent(self, intent_entry):
         """Enable or disable product_entry based on intent_entry value."""
-        intent_value = intent_entry.get().strip()
+        intent_value = intent_entry.get().strip().lower()
         if self.current_row_index is not None:
             product_entry = self.rows[self.current_row_index][2]  # Access the product_entry using the current row index
-            if intent_value in ["Science", "Other"]:
+            if intent_value in ["science", "other"]:
                 product_entry.config(state=tk.NORMAL)  # Enable editing
             else:
                 product_entry.config(state=tk.DISABLED)  # Disable editing
