@@ -1,0 +1,8 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+tica,img,fits,Time_series_images
+tica,img,fits,Full_Frame_Images
+tica,cat,h5,Source_catalogs
+tica,img,fits,this
+tica,cat,h5,calibration
+tica,img,fits,Observational
+tica,cat,h5,Observational

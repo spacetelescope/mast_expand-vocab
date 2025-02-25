@@ -1,0 +1,4 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+tglc,llc,fits,Light_curves
+tglc,llc,fits,this
+tglc,llc,fits,Observational

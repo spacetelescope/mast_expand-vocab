@@ -1,0 +1,4 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+gsfc-eleanor-lite,lc,fits,Light_curves
+gsfc-eleanor-lite,lc,fits,this
+gsfc-eleanor-lite,lc,fits,Observational

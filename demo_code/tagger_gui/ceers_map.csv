@@ -1,0 +1,13 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+ceers,i2d,fits,Image_mosaics
+ceers,i2d,fits,Dithered_images
+ceers,i2d,fits,Drizzled_images
+ceers,i2d,tar.gz,Image_mosaics
+ceers,i2d,tar.gz,Dithered_images
+ceers,i2d,tar.gz,Drizzled_images
+ceers,6color-mosaic-img,png,preview
+ceers,i2d,fits,this
+ceers,i2d,tar.gz,this
+ceers,6color-mosaic-img,png,Observational
+ceers,i2d,fits,Observational
+ceers,i2d,tar.gz,Observational

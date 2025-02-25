@@ -1,0 +1,11 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+scylla,drz,fits,Drizzled_images
+scylla,st,fits,Photometry_catalogs
+scylla,image,png,preview
+scylla,drz,fits,this
+scylla,preview,png,preview
+scylla,st,fits,this
+scylla,image,png,Observational
+scylla,drz,fits,Observational
+scylla,preview,png,Observational
+scylla,st,fits,Observational

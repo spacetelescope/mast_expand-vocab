@@ -1,0 +1,15 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+wide,3nod-spec2d,fits,Long-slit_spectral_images
+wide,2nod-spec2d,fits,Long-slit_spectral_images
+wide,3nod-spec1d,fits,Spectra
+wide,2nod-spec1d,fits,Spectra
+wide,3nod-spec2d,fits,this
+wide,2nod-spec2d,fits,this
+wide,2nod,png,preview
+wide,3nod-spec1d,fits,this
+wide,2nod-spec1d,fits,this
+wide,3nod-spec2d,fits,Observational
+wide,2nod-spec2d,fits,Observational
+wide,2nod,png,Observational
+wide,3nod-spec1d,fits,Observational
+wide,2nod-spec1d,fits,Observational

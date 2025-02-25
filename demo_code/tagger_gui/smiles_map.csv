@@ -1,0 +1,9 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+smiles,drz,fits,Image_mosaics
+smiles,drz,fits,Drizzled_images
+smiles,drz,fits,Dithered_images
+smiles,catalog,fits,Photometry_catalogs
+smiles,drz,fits,this
+smiles,catalog,fits,this
+smiles,drz,fits,Observational
+smiles,catalog,fits,Observational

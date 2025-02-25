@@ -1,0 +1,10 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+smarts,sim,tar.gz,Light_curves
+smarts,cat,tar.gz,Spectrograms
+smarts,cat,tar.gz,Frequency_domain_data
+smarts,cat,tar.gz,Catalogs
+smarts,cat,tar.gz,Rotation_period_catalogs
+smarts,sim,tar.gz,this
+smarts,cat,tar.gz,this
+smarts,sim,tar.gz,Synthetic
+smarts,cat,tar.gz,Synthetic

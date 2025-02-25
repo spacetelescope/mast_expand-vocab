@@ -1,0 +1,7 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+jades,spec,fits,Spectra
+jades,spec,fits,Spectral_images
+jades,img,png,Images
+jades,img,png,Full_Frame_Images
+jades,s3d,fits,Spectral_image_cubes
+jades,s3d,fits,Spectral_line_images

@@ -1,0 +1,10 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+candelsnirwl,sci,fits,Image_mosaics
+candelsnirwl,sci,fits,Drizzled_images
+candelsnirwl,sci,fits,Dithered_images
+candelsnirwl,wht,fits,weight
+candelsnirwl,sci,fits,this
+candelsnirwl,rms,fits,noise
+candelsnirwl,wht,fits,Observational
+candelsnirwl,sci,fits,Observational
+candelsnirwl,rms,fits,Observational

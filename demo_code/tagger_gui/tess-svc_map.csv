@@ -1,0 +1,9 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+tess-svc,cat,csv,Rotation_period_catalogs
+tess-svc,cat,csv,Photometry_catalogs
+tess-svc,img,zip,Light_curves
+tess-svc,img,zip,Power_spectra
+tess-svc,cat,csv,this
+tess-svc,img,zip,this
+tess-svc,cat,csv,Observational
+tess-svc,img,zip,Observational

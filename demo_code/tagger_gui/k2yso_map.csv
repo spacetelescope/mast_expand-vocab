@@ -1,0 +1,4 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+k2yso,lc,fits,Light_curves
+k2yso,lc,fits,this
+k2yso,lc,fits,Observational

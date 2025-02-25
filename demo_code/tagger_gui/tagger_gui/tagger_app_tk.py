@@ -103,6 +103,10 @@ class MASTDataProductTagger:
         self.read_directory_button = tk.Button(self.scrollable_frame, text="Read Directory", command=self.read_directory)
         self.read_directory_button.pack(pady=5)
 
+        # Add "Read Manifest" button
+        self.read_manifest_button = tk.Button(self.scrollable_frame, text="Read Manifest", command=self.read_manifest)
+        self.read_manifest_button.pack(pady=5)
+
         # Initial row
         self.first_row_added = False
         self.add_row()
@@ -117,10 +121,10 @@ class MASTDataProductTagger:
         self.suggestions_list.bind("<Motion>", self.on_hover)
 
         # Fix this later to pull from yaml/skos: set list of suffix and extension suggestions
-        self.extension_suggestions = ["asdf", "csv", "db", "ecsv", "fits", "jpeg", "jpg", "md", "pdf", "png", "txt"]  # Pull from yaml
-        self.suffix_suggestions = ['cat', 'drz', 'img', 'model', 'spec']  # Pull from yaml
-        self.basis_suggestions = ['Observations', 'Observation-derived_physical_properties', 'Synthetic_models']  # Pull from skos
-        self.intent_suggestions = ['science', 'preview', 'background', 'error', 'exposure_time', 'noise', 'weight', 'bias', 'dark', 'flat', 'other']  # Pull from skos
+        self.extension_suggestions = ["asdf", "csv", "db", "ecsv", "fits", "jpeg", "jpg", "md", "pdf", "png", "txt"]  # Pull from yaml !!!
+        self.suffix_suggestions = ['cat', 'drz', 'img', 'model', 'spec']  # Pull from yaml !!! 
+        self.basis_suggestions = ['Observational', 'Derived', 'Synthetic']  # Pull from skos !!! Add human readable labels
+        self.intent_suggestions = ['this', 'preview', 'background', 'error', 'noise', 'exposure', 'weight', 'bias', 'dark', 'flat', 'documentation', 'calibration', 'auxiliary']  # Pull from skos. !!! show "science", "other auxiliary", "exposure time" etc. as labels. 
 
     def on_vertical(self, event):
         """Handle mouse wheel scroll."""
@@ -365,7 +369,23 @@ class MASTDataProductTagger:
         """Read the specified directory and populate unique suffixes."""
         directory = filedialog.askdirectory()  # Open a dialog to choose a directory
         if directory:
-            suffix_extensions = find_suffix_extensions(directory)
+            suffix_extensions = find_suffix_extensions_directory(directory)
+            self.populate_suffix_extensions(suffix_extensions)
+
+    def read_manifest(self):
+        """Read the specified manifest txt file and populate unique suffixes"""
+
+        manifest_file = filedialog.askopenfilename(title="Select manifest file", filetypes=[("Text Files", "*.txt")])
+
+        filenames = []
+        with open(manifest_file, mode='r', encoding='utf-8') as txtfile:
+            for line in txtfile:
+                filename = line.strip()
+                if filename:
+                    filenames.append(filename)
+
+        if filenames:
+            suffix_extensions = find_suffix_extensions_manifestlist(filenames)
             self.populate_suffix_extensions(suffix_extensions)
 
     def populate_suffix_extensions(self, suffix_extensions):
@@ -430,7 +450,7 @@ class MASTDataProductTagger:
         intent_value = intent_entry.get().strip().lower()
         if self.current_row_index is not None:
             product_entry = self.rows[self.current_row_index][2]  # Access the product_entry using the current row index
-            if intent_value in ["science", "other"]:
+            if intent_value in ["this", "auxiliary", "calibration"]:
                 product_entry.config(state=tk.NORMAL)  # Enable editing
             else:
                 product_entry.config(state=tk.DISABLED)  # Disable editing
@@ -438,7 +458,7 @@ class MASTDataProductTagger:
     def open_coverage_dialog(self):
         """Open a dialog for selecting multiple coverage options."""
         self.coverage_dialog = tk.Toplevel(self.master)
-        self.coverage_dialog.title("Set sky footprint of collection")
+        self.coverage_dialog.title("Set sky footprint of science products in the collection")
 
         self.coverage_listbox = tk.Listbox(self.coverage_dialog, selectmode=tk.MULTIPLE, font=("Arial", 18))
         for option in self.coverage_options:
@@ -459,17 +479,17 @@ class MASTDataProductTagger:
 
         with open(f'{collection}_project.csv', 'w', newline='') as csvfile:
             csvwriter = csv.writer(csvfile)
-            csvwriter.writerow(['ingest_id', 'coverage'])
+            csvwriter.writerow(['ingest_id', 'ingest_uri_short'])
             for option in selected_options:
                 csvwriter.writerow([collection, option])
 
         self.coverage_dialog.destroy()  # Close the dialog
 
 
-def find_suffix_extensions(directory) -> list:
+def find_suffix_extensions_directory(directory) -> list:
     unique_suffix_extensions = set()
 
-    pattern = re.compile(r'_([^_]*)(\.[\w.]+)$')
+    pattern = re.compile(r'_([^_]+)(\.[^_]+)$')
 
     for _, _, files in os.walk(directory):
         for file in files:
@@ -477,6 +497,20 @@ def find_suffix_extensions(directory) -> list:
             if match:
                 suffix_extension = match.group(1) + match.group(2)
                 unique_suffix_extensions.add(suffix_extension)
+
+    return list(unique_suffix_extensions)
+
+
+def find_suffix_extensions_manifestlist(manifestlist) -> list:
+    unique_suffix_extensions = set()
+
+    pattern = re.compile(r'_([^_]+)(\.[^_]+)$')
+
+    for i in manifestlist:
+        match = pattern.search(i)
+        if match:
+            suffix_extension = match.group(1) + match.group(2)
+            unique_suffix_extensions.add(suffix_extension)
 
     return list(unique_suffix_extensions)
 

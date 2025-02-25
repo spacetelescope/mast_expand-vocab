@@ -1,0 +1,13 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+clues,spectrum-contnorm,fits,Spectra
+clues,spectrum-lya,fits,Profile-fitted_spectra
+clues,spectrum-pop,fits,Population_synthesis_spectra
+clues,spectrum,fits,Spectra
+clues,spectrum-contnorm,fits,this
+clues,spectrum-lya,fits,this
+clues,spectrum-pop,fits,this
+clues,spectrum,fits,this
+clues,spectrum-contnorm,fits,Observational
+clues,spectrum-lya,fits,Observational
+clues,spectrum-pop,fits,Derived
+clues,spectrum,fits,Observational

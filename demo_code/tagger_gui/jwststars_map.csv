@@ -1,0 +1,7 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+jwststars,phot,fits,Drizzled_images
+jwststars,i2d,fits,Photometry_catalogs
+jwststars,phot,fits,this
+jwststars,i2d,fits,this
+jwststars,phot,fits,Observational
+jwststars,i2d,fits,Observational

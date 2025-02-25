@@ -1,0 +1,7 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+pqs,catalog,fits,Source_classification_catalogs
+pqs,1dspec,fits,Spectra
+pqs,catalog,fits,this
+pqs,1dspec,fits,this
+pqs,catalog,fits,Observational
+pqs,1dspec,fits,Observational

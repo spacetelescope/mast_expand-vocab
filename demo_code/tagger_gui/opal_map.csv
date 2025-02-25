@@ -1,0 +1,15 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+opal,globalmap,fits,Cylindrically_projected_images
+opal,globalmap,fits,Navigated_images
+opal,globalmap,fits,Image_mosaics
+opal,globalmap,fits,Time_series_images
+opal,globalmap-small,png,preview
+opal,globalmap,fits,this
+opal,globalmap,tif,preview
+opal,globalmap-medium,tif,preview
+opal,globalmap-small,tif,preview
+opal,globalmap-small,png,Observational
+opal,globalmap,fits,Observational
+opal,globalmap,tif,Observational
+opal,globalmap-medium,tif,Observational
+opal,globalmap-small,tif,Observational

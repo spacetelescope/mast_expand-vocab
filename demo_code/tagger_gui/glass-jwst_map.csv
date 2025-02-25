@@ -1,0 +1,17 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+glass-jwst,cat,fits,Photometry_catalogs
+glass-jwst,cat,fits,Spectral_line_source_catalogs
+glass-jwst,sci,fits,Image_mosaics
+glass-jwst,spec,fits,Spectra
+glass-jwst,spec,fits,Long-slit_spectral_images
+glass-jwst,spec-template,fits,Multi-object_composite_spectra
+glass-jwst,cat,fits,this
+glass-jwst,sci,fits,this
+glass-jwst,rms,fits,noise
+glass-jwst,spec,fits,this
+glass-jwst,spec-template,fits,this
+glass-jwst,cat,fits,Observational
+glass-jwst,sci,fits,Observational
+glass-jwst,rms,fits,Observational
+glass-jwst,spec,fits,Observational
+glass-jwst,spec-template,fits,Observational

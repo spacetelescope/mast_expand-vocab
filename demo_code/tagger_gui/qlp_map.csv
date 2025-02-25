@@ -1,0 +1,7 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+qlp,llc,fits,Light_curves
+qlp,llc,txt,Light_curves
+qlp,llc,fits,this
+qlp,llc,txt,this
+qlp,llc,fits,Observational
+qlp,llc,txt,Observational

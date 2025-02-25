@@ -1,0 +1,11 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+phathighmass,cat,csv,Photometry_catalogs
+phathighmass,cat,csv,Extinction_catalogs
+phathighmass,cat,csv,Temperature_catalogs
+phathighmass,cat,csv,Metallicity_catalogs
+phathighmass,cat,csv,Age_catalogs
+phathighmass,cat,csv,Surface_gravity_catalogs
+phathighmass,cat,csv,Mass_catalogs
+phathighmass,cat,csv,Initial_mass_catalogs
+phathighmass,cat,csv,this
+phathighmass,cat,csv,Observational

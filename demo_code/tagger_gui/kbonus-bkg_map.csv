@@ -1,0 +1,10 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+kbonus-bkg,lc,fits,Light_curves
+kbonus-bkg,cat,fits,Photometry_catalogs
+kbonus-bkg,lcf,tar.gz,Source_classification_catalogs
+kbonus-bkg,lc,fits,this
+kbonus-bkg,cat,fits,this
+kbonus-bkg,lcf,tar.gz,this
+kbonus-bkg,lc,fits,Observational
+kbonus-bkg,cat,fits,Observational
+kbonus-bkg,lcf,tar.gz,Observational

@@ -1,0 +1,10 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+phangs-jwst,tweakback,tar.gz,Dithered_images
+phangs-jwst,tweakback,tar.gz,Drizzled_images
+phangs-jwst,img,fits,Image_mosaics
+phangs-jwst,img,fits,Dithered_images
+phangs-jwst,img,fits,Drizzled_images
+phangs-jwst,tweakback,tar.gz,this
+phangs-jwst,img,fits,this
+phangs-jwst,tweakback,tar.gz,Observational
+phangs-jwst,img,fits,Observational

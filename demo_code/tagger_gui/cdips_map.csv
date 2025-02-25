@@ -1,0 +1,9 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+cdips,catalog,csv,Astrometric_catalogs
+cdips,catalog,csv,Photometry_catalogs
+cdips,catalog,csv,Age_catalogs
+cdips,llc,fits,Light_curves
+cdips,catalog,csv,this
+cdips,llc,fits,this
+cdips,catalog,csv,Observational
+cdips,llc,fits,Observational

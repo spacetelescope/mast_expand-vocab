@@ -8,7 +8,8 @@ app = Flask(__name__)
 CORS(app)
 
 # Define RDF file URL
-rdf_file_url = "https://raw.githubusercontent.com/spacetelescope/mast_expand-vocab/main/vocabs/data-product-type.rdf"
+rdf_file_url = './tagger_gui/data-product-type.rdf'  # !!!TEMP LOCAL MAINTENANCE
+# rdf_file_url = "https://raw.githubusercontent.com/spacetelescope/mast_expand-vocab/main/vocabs/data-product-type.rdf"
 
 # Load RDF file from URL
 g = Graph()

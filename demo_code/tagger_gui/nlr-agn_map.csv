@@ -1,0 +1,6 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+nlr-agn,drz,fits,Drizzled_images
+nlr-agn,drz,fits,Dithered_images
+nlr-agn,drz,fits,Spectral_line_images
+nlr-agn,drz,fits,this
+nlr-agn,drz,fits,Observational

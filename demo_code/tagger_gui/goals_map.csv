@@ -1,0 +1,5 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+goals,s3d,fits,Spectral_image_cubes
+goals,s3d,fits,Dithered_images
+goals,s3d,fits,this
+goals,s3d,fits,Observational

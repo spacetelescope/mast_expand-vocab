@@ -1,0 +1,12 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+lmc-flows,spec,fits,Spectra
+lmc-flows,cat,txt,Source_classification_catalogs
+lmc-flows,cat,txt,Spectral_line_source_catalogs
+lmc-flows,spec,pdf,preview
+lmc-flows,spec,png,preview
+lmc-flows,spec,fits,this
+lmc-flows,cat,txt,this
+lmc-flows,spec,pdf,Observational
+lmc-flows,spec,png,Observational
+lmc-flows,spec,fits,Observational
+lmc-flows,cat,txt,Observational

@@ -1,0 +1,5 @@
+ingest_id,ingest_suffix,ingest_format,ingest_uri_short
+jades,spec,fits,Spectral_images
+jades,spec,fits,Slitless_spectroscopy_images
+jades,img,jpg,Image_stacks
+jades,s3d,fits,Time_series_images
